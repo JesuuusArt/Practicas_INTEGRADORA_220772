@@ -1,0 +1,204 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Mobile System Architecture",
+    "quality_profile": "showcase",
+    "viewBox": [1380, 600]
+  },
+  "layout": {
+    "mode": "grid",
+    "origin": [80, 90],
+    "cols": 4,
+    "gapX": 120,
+    "gapY": 110,
+    "cellW": 220,
+    "cellH": 90
+  },
+  "components": [
+    {
+      "id": "mobileApp",
+      "type": "frontend",
+      "label": "Flutter Mobile App",
+      "sublabel": "iOS / Android client",
+      "tag": "Mobile client",
+      "pos": [100, 220],
+      "size": [230, 94]
+    },
+    {
+      "id": "keycloak",
+      "type": "security",
+      "label": "Keycloak Authentication",
+      "sublabel": "Identity and access management",
+      "tag": "Authentication layer",
+      "pos": [480, 70],
+      "size": [230, 94]
+    },
+    {
+      "id": "fastapi",
+      "type": "backend",
+      "label": "FastAPI REST API",
+      "sublabel": "Business logic and REST",
+      "tag": "API layer",
+      "pos": [480, 220],
+      "size": [230, 94]
+    },
+    {
+      "id": "postgresql",
+      "type": "database",
+      "label": "PostgreSQL",
+      "sublabel": "Relational application data",
+      "tag": "Data layer",
+      "pos": [850, 100],
+      "size": [230, 94]
+    },
+    {
+      "id": "mongodb",
+      "type": "database",
+      "label": "MongoDB",
+      "sublabel": "Document-oriented data",
+      "tag": "Data layer",
+      "pos": [850, 320],
+      "size": [230, 94]
+    },
+    {
+      "id": "mapsService",
+      "type": "external",
+      "label": "Leaflet / Maps",
+      "sublabel": "Tiles and geospatial display",
+      "tag": "External service",
+      "pos": [1100, 420],
+      "size": [230, 94]
+    },
+    {
+      "id": "docker",
+      "type": "cloud",
+      "label": "Docker",
+      "sublabel": "Container runtime",
+      "tag": "Development infrastructure",
+      "pos": [100, 500],
+      "size": [190, 70]
+    },
+    {
+      "id": "dockerCompose",
+      "type": "cloud",
+      "label": "Docker Compose",
+      "sublabel": "Local service orchestration",
+      "tag": "Development infrastructure",
+      "pos": [350, 500],
+      "size": [210, 70]
+    },
+    {
+      "id": "git",
+      "type": "external",
+      "label": "Git",
+      "sublabel": "Local source control",
+      "tag": "Source control",
+      "pos": [630, 500],
+      "size": [170, 70]
+    },
+    {
+      "id": "github",
+      "type": "external",
+      "label": "GitHub",
+      "sublabel": "Remote repository hosting",
+      "tag": "Source control",
+      "pos": [860, 500],
+      "size": [190, 70]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "security-group",
+      "label": "Mobile device trust boundary",
+      "wraps": ["mobileApp"],
+      "pad": 28
+    },
+    {
+      "kind": "security-group",
+      "label": "Application trust boundary",
+      "wraps": ["keycloak", "fastapi", "postgresql", "mongodb"],
+      "pad": 38
+    },
+    {
+      "kind": "security-group",
+      "label": "External service boundary",
+      "wraps": ["mapsService"],
+      "pad": 28
+    },
+    {
+      "kind": "region",
+      "label": "Local development environment",
+      "wraps": ["docker", "dockerCompose", "git"],
+      "pad": 28
+    }
+  ],
+  "connections": [
+    {
+      "id": "authenticate",
+      "from": "mobileApp",
+      "to": "keycloak",
+      "label": "OIDC authentication",
+      "variant": "security",
+      "route": "auto"
+    },
+    {
+      "id": "apiRequest",
+      "from": "mobileApp",
+      "to": "fastapi",
+      "label": "HTTPS REST + bearer token",
+      "variant": "emphasis",
+      "labelAt": [435, 450],
+      "route": "auto"
+    },
+    {
+      "id": "tokenValidation",
+      "from": "fastapi",
+      "to": "keycloak",
+      "label": "Identity / role validation",
+      "variant": "security",
+      "route": "auto"
+    },
+    {
+      "id": "relationalData",
+      "from": "fastapi",
+      "to": "postgresql",
+      "label": "Read / write relational data",
+      "labelDy": 14,
+      "route": "auto"
+    },
+    {
+      "id": "documentData",
+      "from": "fastapi",
+      "to": "mongodb",
+      "label": "Read / write document data",
+      "labelAt": [900, 216],
+      "route": "auto"
+    },
+    {
+      "id": "mapContent",
+      "from": "mobileApp",
+      "to": "mapsService",
+      "label": "Map tiles and geospatial content",
+      "route": "auto"
+    },
+    {
+      "id": "composeRuntime",
+      "from": "dockerCompose",
+      "to": "docker",
+      "label": "Starts containers",
+      "variant": "dashed",
+      "labelDy": -34,
+      "route": "auto"
+    },
+    {
+      "id": "gitHubSync",
+      "from": "git",
+      "to": "github",
+      "label": "Push / pull source changes",
+      "variant": "dashed",
+      "labelDy": -34,
+      "route": "auto"
+    }
+  ]
+}
