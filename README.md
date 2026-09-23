@@ -39,7 +39,7 @@
 ---
 
 ## ️ Visualización y acceso
-
+> Actualización realizada para sincronizar el repositorio con la rama principal en GitHub.
 1. **En línea:** revisa la práctica en [GitHub Pages](https://jesuuusart.github.io/Practicas_INTEGRADORA_220772/Practica02/).
 2. **Localmente:** descarga el repositorio y abre los archivos HTML directamente en tu navegador.
 
