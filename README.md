@@ -1,17 +1,21 @@
-# 🚀 Prácticas de Materia Integradora — Arquitectura de Sistema Móvil
+# 🚀 Prácticas de Materia Integradora
+
+<div align="center">
+  <img src="./logoTI.jpeg" alt="Logo TI" width="180" />
+</div>
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live%20Demo-38bdf8?style=for-the-badge&logo=github)](https://jesuuusart.github.io/Practicas_INTEGRADORA_220772/)
 [![Status](https://img.shields.io/badge/Status-Completed-10b981?style=for-the-badge)](#)
 [![Student](https://img.shields.io/badge/Matr%C3%ADcula-220772-a855f7?style=for-the-badge)](#)
 
-> Repositorio oficial para las prácticas de la materia **Integradora**. Contiene la especificación, diagramas interactivos, evidencias visuales renderizadas y el sitio web desplegado en GitHub Pages.
+> Repositorio de evidencias y entregas de la materia de integración, centrado en la generación de diagramas arquitectónicos, modelado visual y publicación de resultados en GitHub Pages.
 
 ---
 
 ## 🔗 Sitio Web Oficial (GitHub Pages)
 
-🌐 **Accede a la página interactiva aquí:**  
-👉 **[https://jesuuusart.github.io/Practicas_INTEGRADORA_220772/](https://jesuuusart.github.io/Practicas_INTEGRADORA_220772/)**
+- 🌐 Página principal: [Practicas_INTEGRADORA_220772](https://jesuuusart.github.io/Practicas_INTEGRADORA_220772/)
+- 🧭 Práctica 02: [Boceto de Arquitectura de Proyecto Integrador](https://jesuuusart.github.io/Practicas_INTEGRADORA_220772/Practica02/)
 
 ---
 
@@ -24,44 +28,22 @@
 
 ---
 
-## 📋 Resumen del Proyecto
+### Tabla de Prácticas de la Materia
 
-En este repositorio se desarrolló el modelo de **Arquitectura de Sistema Móvil (Mobile System Architecture)** para una solución empresarial multiplataforma.
+| No. | Nombre | Descripción | Ponderación | Estatus | Link |
+| :---: | --- | --- | ---: | --- | --- |
+| 1 | Metodología de Evaluación de la Materia | Transcribir en la libreta y comprender la metodología y las fechas de evaluación de la asignatura. | 5 firmas | 🟢 Concluida | — |
+| 2 | Boceto de Arquitectura de Proyecto Integrador con Archify | Generación de un diagrama interactivo en HTML de la arquitectura del Proyecto Integrador utilizando la herramienta Archify. | 24 firmas | 🟢 Concluida | [Ver Diagrama Interactivo de Arquitectura en GitHub Pages](https://jesuuusart.github.io/Practicas_INTEGRADORA_220772/Practica02/) |
 
-### Componentes de la Arquitectura:
-1. **Cliente Móvil:** App desarrollada en **Flutter** (para iOS y Android).
-2. **Capa de Seguridad:** Servidor **Keycloak** para gestión de identidades y autenticación mediante **OpenID Connect (OIDC)** y tokens de acceso Bearer.
-3. **API Backend:** Servicio REST desarrollado con **FastAPI** (Python).
-4. **Bases de Datos:**
-   - **PostgreSQL:** Almacenamiento relacional de datos estructurados de la aplicación.
-   - **MongoDB:** Almacenamiento NoSQL para documentos y registros.
-5. **Servicios GIS:** Integración de mapas con **Leaflet / Maps**.
-6. **Infraestructura y DevOps:** Despliegue en contenedores **Docker**, orquestación con **Docker Compose**, y control de versiones con **Git** y **GitHub**.
 
 ---
 
-## 📂 Contenido del Repositorio
+## ️ Visualización y acceso
 
-| Archivo / Recurso | Descripción |
-| :--- | :--- |
-| 📄 [`index.html`](index.html) | Portal web principal en GitHub Pages con el perfil del estudiante, visor en vivo, evidencia de imágenes y tabla de archivos. |
-| 📊 [`mobile-system-architecture.html`](mobile-system-architecture.html) | Diagrama de arquitectura interactivo generado con Archify 2.17. |
-| ⚙️ [`mobile-system-architecture.json`](mobile-system-architecture.json) | Especificación en formato JSON con nodos, fronteras de seguridad y conexiones. |
-| 🖼️ `mobile-system-architecture.visual-check.*.png` | Capturas de evidencia en alta resolución (1440x900 y 2048x1320 en modo oscuro y claro). |
-| 📋 [`mobile-system-architecture.visual-check.html`](mobile-system-architecture.visual-check.html) | Reporte automatizado de verificación visual y contención de elementos. |
-
----
-
-## 🛠️ Cómo Visualizar
-
-1. **En línea:** Visita el enlace de [GitHub Pages](https://jesuuusart.github.io/Practicas_INTEGRADORA_220772/).
-2. **Localmente:** Clona el repositorio y abre `index.html` en cualquier navegador web.
+1. **En línea:** revisa la práctica en [GitHub Pages](https://jesuuusart.github.io/Practicas_INTEGRADORA_220772/Practica02/).
+2. **Localmente:** descarga el repositorio y abre los archivos HTML directamente en tu navegador.
 
 ```bash
 git clone https://github.com/JesuuusArt/Practicas_INTEGRADORA_220772.git
 cd Practicas_INTEGRADORA_220772
 ```
-
----
-
-© 2026 **Jesús Alejandro Artiaga Morales** — Matrícula: **220772** (Grado 10° A)
