@@ -14,6 +14,8 @@ La propuesta modelada responde a la arquitectura general del proyecto integrador
 
 ---
 
+- 🌐 Página principal: [Practicas_INTEGRADORA_220772](https://jesuuusart.github.io/Practicas_INTEGRADORA_220772/)
+
 ## Objetivo
 
 Instalar, configurar y ejecutar Archify junto con Codex AI para diseñar y publicar un boceto de arquitectura del Proyecto Integrador, con enfoque en la representación visual, claridad técnica y disponibilidad de la documentación como recurso interactivo para revisión y presentación.
