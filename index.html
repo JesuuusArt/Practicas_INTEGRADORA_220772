@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prácticas de Integradora | 220772</title>
+    <meta
+      name="description"
+      content="Portafolio de prácticas de la materia Integradora. Documentación, diagramas interactivos y evidencias visuales."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      :root {
+        --bg: #07111f;
+        --bg-2: #0d1b2a;
+        --panel: rgba(15, 23, 42, 0.9);
+        --panel-soft: rgba(17, 24, 39, 0.82);
+        --panel-alt: rgba(30, 41, 59, 0.9);
+        --line: rgba(148, 163, 184, 0.18);
+        --line-strong: rgba(148, 163, 184, 0.28);
+        --text: #e5eefb;
+        --muted: #a9b7cc;
+        --primary: #38bdf8;
+        --primary-strong: #0ea5e9;
+        --success: #22c55e;
+        --warning: #f59e0b;
+        --shadow: 0 20px 50px rgba(2, 6, 23, 0.45);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Inter", sans-serif;
+        background:
+          radial-gradient(circle at top, rgba(56, 189, 248, 0.12), transparent 30%),
+          linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      .container {
+        width: min(1180px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        backdrop-filter: blur(12px);
+        background: rgba(7, 17, 31, 0.7);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        min-height: 72px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+      }
+
+      .brand-mark {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        display: grid;
+        place-items: center;
+        background: linear-gradient(135deg, var(--primary), #7dd3fc);
+        color: #021421;
+        box-shadow: var(--shadow);
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .nav-link {
+        padding: 8px 12px;
+        border-radius: 999px;
+        color: var(--muted);
+        border: 1px solid transparent;
+        transition: all 0.2s ease;
+      }
+
+      .nav-link:hover {
+        color: var(--text);
+        border-color: var(--line);
+        background: rgba(148, 163, 184, 0.05);
+      }
+
+      .hero {
+        padding: 72px 0 36px;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.4fr 0.9fr;
+        align-items: stretch;
+        gap: 28px;
+      }
+
+      .hero-panel,
+      .card,
+      .mini-card,
+      .feature-card,
+      .repo-card,
+      .timeline-card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        box-shadow: var(--shadow);
+      }
+
+      .hero-panel {
+        padding: 36px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-panel::before {
+        content: "";
+        position: absolute;
+        width: 240px;
+        height: 240px;
+        right: -60px;
+        top: -60px;
+        background: radial-gradient(circle, rgba(56, 189, 248, 0.25), transparent 60%);
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 7px 12px;
+        border-radius: 999px;
+        background: rgba(56, 189, 248, 0.08);
+        border: 1px solid rgba(56, 189, 248, 0.2);
+        color: var(--primary);
+        font-size: 0.76rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      h1 {
+        font-family: "Outfit", sans-serif;
+        font-size: clamp(2.2rem, 4vw, 4rem);
+        line-height: 1.05;
+        margin: 18px 0 16px;
+      }
+
+      .lead {
+        color: var(--muted);
+        font-size: 1.05rem;
+        max-width: 60ch;
+      }
+
+      .hero-actions {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        flex-wrap: wrap;
+        margin-top: 26px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 12px 18px;
+        border-radius: 12px;
+        font-weight: 700;
+        letter-spacing: 0.01em;
+        transition: transform 0.2s ease, border-color 0.2s ease;
+      }
+
+      .btn:hover {
+        transform: translateY(-1px);
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, var(--primary), var(--primary-strong));
+        color: #011826;
+        box-shadow: 0 10px 26px rgba(14, 165, 233, 0.32);
+      }
+
+      .btn-secondary {
+        background: rgba(148, 163, 184, 0.04);
+        border: 1px solid var(--line-strong);
+        color: var(--text);
+      }
+
+      .metrics {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+        margin-top: 28px;
+      }
+
+      .metric {
+        padding: 18px 16px;
+        border-radius: 16px;
+        background: rgba(148, 163, 184, 0.04);
+        border: 1px solid var(--line);
+      }
+
+      .metric strong {
+        display: block;
+        font-size: 1.5rem;
+        font-weight: 800;
+        margin-bottom: 2px;
+      }
+
+      .metric span {
+        color: var(--muted);
+        font-size: 0.82rem;
+      }
+
+      .profile-panel {
+        padding: 28px 22px;
+      }
+
+      .profile-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 18px;
+      }
+
+      .profile-avatar {
+        width: 72px;
+        height: 72px;
+        border-radius: 18px;
+        display: grid;
+        place-items: center;
+        font-size: 1.6rem;
+        color: #06131d;
+        background: linear-gradient(135deg, #c7d2fe, #67e8f9);
+        font-weight: 800;
+      }
+
+      .status {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(34, 197, 94, 0.08);
+        color: #86efac;
+        border: 1px solid rgba(34, 197, 94, 0.2);
+        border-radius: 999px;
+        padding: 7px 10px;
+        font-size: 0.76rem;
+        font-weight: 700;
+      }
+
+      .profile-list {
+        display: grid;
+        gap: 12px;
+        margin-top: 20px;
+      }
+
+      .profile-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        padding: 10px 12px;
+        border-radius: 12px;
+        background: rgba(148, 163, 184, 0.04);
+        border: 1px solid var(--line);
+      }
+
+      .profile-item span {
+        color: var(--muted);
+        font-size: 0.82rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      .profile-item strong {
+        font-size: 0.95rem;
+      }
+
+      .section {
+        padding: 28px 0;
+      }
+
+      .section-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 20px;
+        margin-bottom: 22px;
+      }
+
+      .section-head h2 {
+        font-family: "Outfit", sans-serif;
+        font-size: clamp(1.7rem, 2vw, 2.5rem);
+        margin: 0;
+      }
+
+      .section-head p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .practice-showcase {
+        display: grid;
+        grid-template-columns: 1.3fr 0.7fr;
+        gap: 24px;
+      }
+
+      .card {
+        padding: 24px;
+      }
+
+      .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 18px;
+      }
+
+      .chip {
+        padding: 6px 10px;
+        border-radius: 999px;
+        font-size: 0.72rem;
+        background: rgba(34, 197, 94, 0.08);
+        border: 1px solid rgba(34, 197, 94, 0.2);
+        color: #86efac;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+      }
+
+      .practice-title {
+        margin: 0;
+        font-size: clamp(1.5rem, 2.2vw, 2.2rem);
+        font-family: "Outfit", sans-serif;
+      }
+
+      .practice-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        color: var(--muted);
+        font-size: 0.86rem;
+        margin: 16px 0 20px;
+      }
+
+      .practice-meta span {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 10px;
+        border-radius: 999px;
+        background: rgba(148, 163, 184, 0.04);
+        border: 1px solid var(--line);
+      }
+
+      .practice-visual {
+        border-radius: 18px;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        background: rgba(148, 163, 184, 0.04);
+      }
+
+      .practice-visual img {
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+      }
+
+      .mini-list {
+        display: grid;
+        gap: 14px;
+        margin-top: 18px;
+      }
+
+      .mini-card {
+        padding: 16px 18px;
+      }
+
+      .mini-card strong {
+        display: block;
+        margin-bottom: 6px;
+      }
+
+      .repo-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .practice-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin: 22px 0 28px;
+      }
+
+      .practice-pill {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        min-height: 46px;
+        padding: 0 18px;
+        border-radius: 999px;
+        border: 1px solid var(--line-strong);
+        background: rgba(148, 163, 184, 0.03);
+        color: var(--muted);
+        font-weight: 700;
+        letter-spacing: 0.02em;
+      }
+
+      .practice-pill.active {
+        background: linear-gradient(135deg, rgba(56, 189, 248, 0.12), rgba(14, 165, 233, 0.08));
+        border-color: rgba(56, 189, 248, 0.4);
+        color: var(--text);
+        box-shadow: 0 10px 22px rgba(14, 165, 233, 0.12);
+      }
+
+      .practice-pill.done {
+        color: #b7f7ce;
+        border-color: rgba(34, 197, 94, 0.28);
+        background: rgba(34, 197, 94, 0.06);
+      }
+
+      .practice-panel {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+      }
+
+      .practice-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 18px;
+        padding: 24px 26px 16px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .practice-header h3 {
+        margin: 10px 0 0;
+        font-family: "Outfit", sans-serif;
+        font-size: clamp(1.8rem, 2.4vw, 2.8rem);
+      }
+
+      .practice-body {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 0;
+      }
+
+      .practice-copy {
+        padding: 26px;
+      }
+
+      .practice-copy p {
+        color: var(--muted);
+        margin: 0 0 18px;
+      }
+
+      .info-list {
+        display: grid;
+        gap: 12px;
+        margin-top: 20px;
+      }
+
+      .info-item {
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+        padding: 12px 14px;
+        border-radius: 14px;
+        background: rgba(148, 163, 184, 0.04);
+        border: 1px solid var(--line);
+      }
+
+      .info-item .bullet {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        background: rgba(56, 189, 248, 0.1);
+        border: 1px solid rgba(56, 189, 248, 0.22);
+        display: grid;
+        place-items: center;
+        color: var(--primary);
+        font-size: 0.7rem;
+        font-weight: 800;
+        flex-shrink: 0;
+      }
+
+      .info-item strong {
+        display: block;
+        margin-bottom: 4px;
+      }
+
+      .practice-side {
+        padding: 26px;
+        border-left: 1px solid var(--line);
+        background: rgba(148, 163, 184, 0.02);
+      }
+
+      .mini-stack {
+        display: grid;
+        gap: 14px;
+      }
+
+      .mini-card {
+        padding: 16px 18px;
+      }
+
+      .mini-card strong {
+        display: block;
+        margin-bottom: 6px;
+      }
+
+      .diagram-frame {
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        overflow: hidden;
+        background: #0b1220;
+        margin-top: 18px;
+      }
+
+      .diagram-frame iframe {
+        display: block;
+        width: 100%;
+        height: 680px;
+        border: none;
+      }
+
+      .repo-card {
+        padding: 22px;
+      }
+
+      .repo-card h3 {
+        margin: 0 0 8px;
+        font-size: 1.15rem;
+      }
+
+      .repo-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 18px;
+      }
+
+      .tag {
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: rgba(56, 189, 248, 0.08);
+        border: 1px solid rgba(56, 189, 248, 0.18);
+        color: var(--primary);
+        font-size: 0.76rem;
+        font-weight: 700;
+      }
+
+      .timeline {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+      }
+
+      .timeline-card {
+        padding: 22px;
+      }
+
+      .timeline-card h3 {
+        margin: 0 0 10px;
+      }
+
+      .steps {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: 12px;
+      }
+
+      .steps li {
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+      }
+
+      .step-no {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        background: rgba(56, 189, 248, 0.12);
+        border: 1px solid rgba(56, 189, 248, 0.22);
+        color: var(--primary);
+        display: grid;
+        place-items: center;
+        font-weight: 800;
+        font-size: 0.75rem;
+        flex-shrink: 0;
+      }
+
+      footer {
+        padding: 32px 0 48px;
+      }
+
+      .footer-panel {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
+        padding-top: 24px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+      }
+
+      @media (max-width: 980px) {
+        .hero-grid,
+        .practice-showcase,
+        .cards-grid,
+        .repo-grid,
+        .timeline {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .nav {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 16px 0;
+        }
+
+        .hero-panel,
+        .card,
+        .repo-card,
+        .timeline-card,
+        .feature-card {
+          padding: 20px;
+        }
+
+        .metrics {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <a href="#top" class="brand" aria-label="Inicio">
+          <span class="brand-mark"><i class="fa-solid fa-diagram-project"></i></span>
+          <span>Prácticas Integradora</span>
+        </a>
+        <nav class="nav-links" aria-label="Navegación principal">
+          <a class="nav-link" href="#inicio">Inicio</a>
+          <a class="nav-link" href="#practicas">Prácticas</a>
+          <a class="nav-link" href="#evidencias">Evidencias</a>
+          <a class="nav-link" href="#repositorio">Repositorio</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="inicio" class="container">
+      <section class="hero">
+        <div class="hero-grid">
+          <div class="hero-panel">
+            <span class="eyebrow"><i class="fa-solid fa-book-open-reader"></i> Materia Integradora</span>
+            <h1>Portafolio de prácticas y proyectos académicos.</h1>
+            <p class="lead">
+              Este repositorio centraliza la documentación, los diagramas interactivos, las evidencias
+              visuales y la entrega de cada práctica desarrollada durante la materia. La idea es crear un
+              espacio ordenado y profesional para ir acumulando todas las entregas futuras.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#practicas"><i class="fa-solid fa-arrow-down"></i> Ver prácticas</a>
+              <a class="btn btn-secondary" href="Practica02/README.md"><i class="fa-solid fa-file-lines"></i> README de práctica</a>
+            </div>
+
+            <div class="metrics" aria-label="Estadísticas del repositorio">
+              <div class="metric">
+                <strong>01</strong>
+                <span>Práctica disponible</span>
+              </div>
+              <div class="metric">
+                <strong>02</strong>
+                <span>Secciones clave</span>
+              </div>
+              <div class="metric">
+                <strong>GitHub</strong>
+                <span>Pages activo</span>
+              </div>
+            </div>
+          </div>
+
+          <aside class="profile-panel">
+            <div class="profile-header">
+              <div class="profile-avatar">JA</div>
+              <span class="status"><i class="fa-solid fa-circle"></i> En línea</span>
+            </div>
+
+            <div class="profile-list">
+              <div class="profile-item">
+                <span>Estudiante</span>
+                <strong>Jesús Alejandro Artiaga Morales</strong>
+              </div>
+              <div class="profile-item">
+                <span>Matrícula</span>
+                <strong>220772</strong>
+              </div>
+              <div class="profile-item">
+                <span>Materia</span>
+                <strong>Integradora</strong>
+              </div>
+              <div class="profile-item">
+                <span>Portal</span>
+                <strong>GitHub Pages</strong>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="practicas" class="section">
+        <div class="section-head">
+          <h2>Prácticas</h2>
+          <p>Acceso rápido a la entrega actual y a la evolución del portafolio académico.</p>
+        </div>
+
+        <div class="practice-pills" aria-label="Selector de prácticas">
+          <button class="practice-pill done" type="button">Práctica 1 finalizada</button>
+          <button class="practice-pill active" type="button">Práctica 2</button>
+        </div>
+
+        <div class="practice-panel" aria-label="Detalle de la práctica 2">
+          <div class="practice-header">
+            <div>
+              <span class="eyebrow" style="display:inline-flex; margin-bottom: 8px;">Práctica 02</span>
+              <h3>Boceto de Arquitectura de Proyecto Integrador con Archify</h3>
+            </div>
+            <span class="chip">Completada</span>
+          </div>
+
+          <div class="practice-body">
+            <div class="practice-copy">
+              <p>
+                Esta práctica consistió en modelar la arquitectura general del proyecto integrador,
+                identificando sus capas principales, servicios, autenticación, almacenamiento de datos,
+                flujos de integración y la estructura conceptual del sistema.
+              </p>
+
+              <p>
+                El objetivo fue representar visualmente la solución académica mediante un diagrama
+                interactivo, con una organización clara de componentes y una visión profesional del
+                proyecto para su presentación y documentación.
+              </p>
+
+              <div class="info-list">
+                <div class="info-item">
+                  <span class="bullet">1</span>
+                  <div>
+                    <strong>Descripción</strong>
+                    <span>Arquitectura del proyecto integrador con modelado visual y documentación técnica.</span>
+                  </div>
+                </div>
+
+                <div class="info-item">
+                  <span class="bullet">2</span>
+                  <div>
+                    <strong>Objetivo</strong>
+                    <span>Diseñar y publicar una vista arquitectónica del sistema para facilitar su análisis.</span>
+                  </div>
+                </div>
+
+                <div class="info-item">
+                  <span class="bullet">3</span>
+                  <div>
+                    <strong>Resultado</strong>
+                    <span>Diagrama interactivo y evidencias visuales generadas en la carpeta de la práctica.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <aside class="practice-side">
+              <div class="mini-stack">
+                <div class="mini-card">
+                  <strong>Herramienta</strong>
+                  <p>Archify + Codex CLI para generar el diagrama arquitectónico.</p>
+                </div>
+                <div class="mini-card">
+                  <strong>Documentación</strong>
+                  <p>README interno, evidencias visuales y archivo PDF de respaldo.</p>
+                </div>
+                <div class="mini-card">
+                  <strong>Enlaces</strong>
+                  <p><a href="Practica02/" style="color: var(--primary); font-weight: 700;">Abrir carpeta de la práctica</a></p>
+                  <p><a href="Practica02/mobile-system-architecture.html" style="color: var(--primary); font-weight: 700;">Ver diagrama interactivo</a></p>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+
+        <div class="diagram-frame" style="margin-top: 28px;">
+          <iframe src="Practica02/mobile-system-architecture.html" title="Diagrama arquitectónico de la práctica 2"></iframe>
+        </div>
+      </section>
+
+      <section id="evidencias" class="section">
+        <div class="section-head">
+          <h2>Evidencias visuales</h2>
+          <p>Capturas del proyecto para revisión rápida de la práctica actual.</p>
+        </div>
+
+        <div class="repo-grid">
+          <article class="repo-card">
+            <h3>Vista previa principal</h3>
+            <p>Captura general del modelado arquitectónico en modo claro.</p>
+            <img src="Practica02/mobile-system-architecture.visual-check.1440x900.light.png" alt="Evidencia visual de la práctica 2" style="margin-top: 18px; border-radius: 16px; border:1px solid var(--line);" />
+            <div class="repo-tags">
+              <span class="tag">1440x900</span>
+              <span class="tag">Light</span>
+            </div>
+          </article>
+
+          <article class="repo-card">
+            <h3>Vista previa alternativa</h3>
+            <p>Versión en modo oscuro para revisión de contraste y presentación.</p>
+            <img src="Practica02/mobile-system-architecture.visual-check.1440x900.dark.png" alt="Evidencia visual modo oscuro" style="margin-top: 18px; border-radius: 16px; border:1px solid var(--line);" />
+            <div class="repo-tags">
+              <span class="tag">1440x900</span>
+              <span class="tag">Dark</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="repositorio" class="section">
+        <div class="section-head">
+          <h2>Repositorio y estructura</h2>
+          <p>La organización actual del proyecto está enfocada en la práctica 02 y en el crecimiento profesional del portafolio.</p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-card">
+            <h3>Organización actual</h3>
+            <ul class="steps">
+              <li><span class="step-no">1</span><div><strong>README general</strong><p>Resumen principal del repositorio y navegación general.</p></div></li>
+              <li><span class="step-no">2</span><div><strong>Carpeta Practica02</strong><p>Documentación, diagrama interactivo, evidencias visuales y PDF.</p></div></li>
+              <li><span class="step-no">3</span><div><strong>GitHub Pages</strong><p>Publicación y acceso rápido a la práctica desde el navegador.</p></div></li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-panel">
+        <span>© 2026 - Materia Integradora</span>
+        <span>Jesús Alejandro Artiaga Morales · 220772</span>
+      </div>
+    </footer>
+  </body>
+</html>
