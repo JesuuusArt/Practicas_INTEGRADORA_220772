@@ -87,8 +87,12 @@ A continuación se muestran las capturas generadas como evidencia del diagrama a
 ### Captura 1 — 1440x900 (modo oscuro)
 
 <div align="center">
-  <img src="./mobile-system-architecture.visual-check.1440x900.dark.png" alt="Evidencia visual 1440x900 dark" width="100%" />
+  <a href="https://jesuuusart.github.io/Practicas_INTEGRADORA_220772/Practica02/">
+    <img src="./mobile-system-architecture.visual-check.1440x900.dark.png" alt="Evidencia visual 1440x900 dark" width="100%" />
+  </a>
 </div>
+
+> 💡 Dar clic en la imagen abre el diagrama interactivo en GitHub Pages.
 
 ### Captura 2 — 1440x900 (modo claro)
 
