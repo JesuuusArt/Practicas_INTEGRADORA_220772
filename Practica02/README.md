@@ -1,5 +1,7 @@
 # Práctica 2: Boceto de Arquitectura de Proyecto Integrador con Archify
 
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Ver%20Diagrama_Interactivo-38bdf8?style=for-the-badge&logo=github)](https://jesuuusart.github.io/Practicas_INTEGRADORA_220772/Practica02/)
+
 <div align="center">
   <img src="../logoTI.jpeg" alt="Logo TI" width="180" />
 </div>
@@ -75,6 +77,10 @@ La práctica incluye un conjunto de archivos que permiten visualizar, analizar y
 - [Archivo JSON del modelo](./mobile-system-architecture.json)
 - [Documento de evidencias PDF](./Documento%20de%20evidencias%20-%20Practica02.pdf)
 - [Reporte visual de validación](./mobile-system-architecture.visual-check.html)
+
+### Acceso en línea (GitHub Pages)
+
+- [Ver diagrama interactivo de arquitectura en GitHub Pages](https://jesuuusart.github.io/Practicas_INTEGRADORA_220772/Practica02/)
 
 La visualización interactiva permite navegar entre componentes, entender la relación entre capas y evaluar la estructura del sistema desde una perspectiva funcional y técnica.
 
