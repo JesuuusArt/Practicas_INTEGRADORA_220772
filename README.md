@@ -16,6 +16,7 @@
 
 - 🌐 Página principal: [Practicas_INTEGRADORA_220772](https://jesuuusart.github.io/Practicas_INTEGRADORA_220772/)
 - 🧭 Práctica 02: [Boceto de Arquitectura de Proyecto Integrador](https://jesuuusart.github.io/Practicas_INTEGRADORA_220772/Practica02/)
+- 🧭 Práctica 03: [Boceto de Modelo Canvas con Archify](https://jesuuusart.github.io/Practicas_INTEGRADORA_220772/Practica03/)
 
 ---
 
@@ -34,6 +35,7 @@
 | :---: | --- | --- | ---: | --- | --- |
 | 1 | Metodología de Evaluación de la Materia | Transcribir en la libreta y comprender la metodología y las fechas de evaluación de la asignatura. | 5 firmas | 🟢 Concluida | — |
 | 2 | Boceto de Arquitectura de Proyecto Integrador con Archify | Generación de un diagrama interactivo en HTML de la arquitectura del Proyecto Integrador utilizando la herramienta Archify. | 24 firmas | 🟢 Concluida | [Ver Diagrama Interactivo de Arquitectura en GitHub Pages](https://jesuuusart.github.io/Practicas_INTEGRADORA_220772/Practica02/) |
+| 3 | Boceto de Modelo Canvas con Archify | Generación de un Business Model Canvas interactivo en HTML para una herramienta multiplataforma (Spotify), mediante un prompt iterado y validado con Archify. | 10 firmas | 🟢 Concluida | [Ver Modelo Canvas en GitHub Pages](https://jesuuusart.github.io/Practicas_INTEGRADORA_220772/Practica03/) |
 
 
 ---
