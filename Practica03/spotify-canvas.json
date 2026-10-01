@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Modelo Business Canvas — Spotify",
+    "quality_profile": "showcase",
+    "viewBox": [1335, 640],
+    "views": [
+      { "id": "flujo-valor", "label": "Flujo de valor", "focus": ["partners", "activities", "resources", "value", "segments", "revenue"], "note": "Cómo los socios y recursos se convierten en oferta, clientes e ingresos." },
+      { "id": "entrega-cliente", "label": "Entrega al cliente", "focus": ["value", "relations", "channels", "segments"], "note": "La propuesta de valor llega al cliente mediante canales y relaciones." }
+    ]
+  },
+  "components": [
+    { "id": "partners", "type": "external", "label": "Socios Clave", "sublabel": "Sellos, artistas, stores", "pos": [40, 60], "size": [155, 380] },
+    { "id": "activities", "type": "backend", "label": "Actividades Clave", "sublabel": "Licencias, dev e IA", "pos": [315, 60], "size": [155, 160] },
+    { "id": "resources", "type": "database", "label": "Recursos Clave", "sublabel": "Plataforma, catálogo", "pos": [315, 280], "size": [155, 160] },
+    { "id": "value", "type": "cloud", "label": "Propuesta de Valor", "sublabel": "Música; Free con anuncios", "pos": [590, 60], "size": [155, 380] },
+    { "id": "relations", "type": "frontend", "label": "Relaciones Clientes", "sublabel": "Autoservicio, playlists", "pos": [865, 60], "size": [155, 160] },
+    { "id": "channels", "type": "messagebus", "label": "Canales", "sublabel": "Web, iOS, Android, TV", "pos": [865, 280], "size": [155, 160] },
+    { "id": "segments", "type": "external", "label": "Segmentos Clientes", "sublabel": "Free, Premium, creadores", "pos": [1140, 60], "size": [155, 380] },
+    { "id": "costs", "type": "backend", "label": "Estructura de Costos", "sublabel": "Regalías y licencias", "pos": [40, 470], "size": [615, 150] },
+    { "id": "revenue", "type": "cloud", "label": "Fuentes de Ingresos", "sublabel": "Suscripción y publicidad", "pos": [685, 470], "size": [610, 150] }
+  ],
+  "connections": [
+    { "id": "partners-activities", "from": "partners", "to": "activities", "label": "contenido y licencias" },
+    { "id": "activities-resources", "from": "activities", "to": "resources", "label": "operan sobre", "labelDy": 24 },
+    { "id": "resources-value", "from": "resources", "to": "value", "label": "habilitan la oferta" },
+    { "id": "value-relations", "from": "value", "to": "relations", "label": "entrega valor", "variant": "emphasis" },
+    { "id": "value-channels", "from": "value", "to": "channels", "label": "distribuye" },
+    { "id": "relations-segments", "from": "relations", "to": "segments", "label": "fideliza" },
+    { "id": "channels-segments", "from": "channels", "to": "segments", "label": "distribución" },
+    { "id": "segments-revenue", "from": "segments", "to": "revenue", "label": "monetización", "variant": "emphasis", "fromSide": "bottom", "toSide": "top", "labelDy": -12 }
+  ],
+  "cards": [
+    { "dot": "emerald", "title": "Modelo freemium", "items": ["El tier gratuito con anuncios alimenta la conversión a Premium", "La suscripción recurrente es el ingreso principal"] },
+    { "dot": "cyan", "title": "Multiplataforma", "items": ["Una misma cuenta en web, móvil, escritorio, TV, altavoces y auto", "Canales nativos para iOS, Android, Windows, macOS y navegador"] },
+    { "dot": "rose", "title": "Ventaja por datos", "items": ["Los datos de escucha impulsan la recomendación (Discover Weekly, Wrapped)", "Segmentación publicitaria y estrategias de retención"] }
+  ]
+}
