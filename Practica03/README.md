@@ -26,7 +26,7 @@ Se seleccionó **Spotify** por ser una plataforma multiplataforma ampliamente ut
 
 ### 2. Estructuración del prompt para Archify
 
-Se redactó un prompt inicial (`prompt-v1.md`) que describe:
+Se redactó un prompt inicial (`prompt-v1.txt`) que describe:
 
 - el tipo de diagrama (`architecture`) y perfil de calidad (*showcase*);
 - la retícula estándar del canvas con los 9 bloques;
@@ -45,7 +45,7 @@ El primer modelado (`spotify-canvas-v1.json`) se validó con el comando `archify
 
 ### 4. Edición del prompt para mejorar el resultado
 
-Con base en la revisión anterior se redactó el prompt mejorado (`prompt-v2.md`) que:
+Con base en la revisión anterior se redactó el prompt mejorado (`prompt-v2.txt`) que:
 
 - redujo las sub-etiquetas a un máximo aproximado de 45 caracteres;
 - amplió los bloques y los pasillos entre columnas a 140 px para dar espacio a las etiquetas;
@@ -58,6 +58,39 @@ El resultado `spotify-canvas.json` pasó la validación *showcase* con **9/9 ver
 ### 5. Documentación y buenas prácticas
 
 Se documentó el proceso completo (prompts, iteraciones, validación y resultados), se agregaron evidencias visuales en modos claro/oscuro y se publicó el diagrama interactivo en GitHub Pages, siguiendo la misma estructura de la práctica 02.
+
+### 6. Tercera iteración: identidad visual Spotify y ficha ampliada
+
+El `prompt-v3.txt` introduce dos capas de presentacion que Archify no resuelve por sí solo:
+
+- **Paleta Spotify** (`spotify-canvas.paleta.json`): verde `#1DB954` como acento, verde claro `#1ED760` para el realce de fleetas, negros `#000000` / `#121212` y grises `#535353` / `#B3B3B3`. Cada bloque del canvas tiene su propio color en modo claro y oscuro; el tema claro usa `#12833C` para mantener contraste AA sobre blanco.
+- **Ficha ampliada al hacer clic** (`spotify-canvas.detalle.json` + capa de interacción): cada bloque y cada lectura clave abre un modal con descripción extendida, elementos clave, qué aporta al modelo, riesgos y dependencias, y las conexiones reales del bloque hacia los demás, derivadas del grafo del spec.
+
+### 7. Build reproducible
+
+El HTML publicado no se edita a mano. `tools/build-canvas.mjs` ejecuta el ciclo completo:
+
+```bash
+node tools/build-canvas.mjs
+```
+
+1. `archify validate` del spec con perfil *showcase*.
+2. `archify render` para obtener el HTML base.
+3. Inyección de la paleta, la ficha ampliada y el runtime de interacción.
+4. `archify check` del HTML resultante.
+5. Emisión del recibo `spotify-canvas.build.json` con los estados de validación.
+
+> **Nota de diseño.** El índice de bloques y las lecturas clave viven **dentro** del modal y no en el flujo de la página. El lector adaptativo de Archify mide únicamente `.header`, `.guided-views` y `.cards` para calcular el alto disponible del SVG; cualquier bloque adicional en el flujo queda fuera de ese presupuesto y produce un lazo `measure() → settleOverflow()` que nunca converge (`Adaptive reader layout did not reach stable dimensions`). Como overlay, la ficha no altera el alto del documento.
+
+### 8. Evidencia de navegador
+
+`archify visual-check` valida el lienzo en 1440×900 y 2048×1320 en ambos temas:
+
+```bash
+node "C:\Users\jesus\.agents\skills\archify\bin\archify.mjs" visual-check spotify-canvas.html
+```
+
+Resultado actual: **containment pass, captures pass**. El recibo queda en `spotify-canvas.visual-check.json` y la hoja de contactos en `spotify-canvas.visual-check.html`.
 
 ---
 
@@ -134,40 +167,60 @@ El Business Model Canvas de Spotify se distribuye en los 9 bloques estándar:
 ## Diagramas y recursos generados
 
 - [Diagrama interactivo del Modelo Canvas](./spotify-canvas.html)
-- [Prompt v1](./prompt-v1.md)
-- [Prompt v2 (mejorado)](./prompt-v2.md)
+- [Prompt v1](./prompt-v1.txt)
+- [Prompt v2 (mejorado)](./prompt-v2.txt)
+- [Prompt v3 (paleta Spotify + ficha ampliada)](./prompt-v3.txt)
 - [Candidato v1 (JSON)](./spotify-canvas-v1.json)
 - [Candidato final (JSON)](./spotify-canvas.json)
+- [Contenido ampliado de la ficha (JSON)](./spotify-canvas.detalle.json)
+- [Paleta Spotify (JSON)](./spotify-canvas.paleta.json)
+- [Build reproducible (Node)](./tools/build-canvas.mjs)
+- [Estilos de la ficha ampliada (CSS)](./tools/spotify-layer.css)
+- [Runtime de interacción (JS)](./tools/spotify-layer.js)
 - [Reporte de validación visual](./spotify-canvas.visual-check.html)
+
+### Cómo usar la ficha ampliada
+
+- Clic sobre cualquier bloque del lienzo, o `Enter` / `Espacio` si tiene el foco.
+- `←` y `→` recorren los nueve bloques; `Esc`, el botón `×` o el fondo oscuro cierran la ficha.
+- En el pie de la ficha hay un índice con los nueve bloques y un panel de **lecturas clave** (`A`, `B`) con las notas de lectura del modelo.
 
 ---
 
 ## Evidencia visual
 
-Capturas generadas como evidencia del diagrama interactivo de la práctica 3:
-
-### Captura 1 — 1440x900 (modo claro)
+### Diagrama completo — modo oscuro
 
 <div align="center">
-  <img src="./spotify-canvas.visual-check.1440x900.light.png" alt="Evidencia visual 1440x900 light" width="100%" />
+  <img src="./docs/spotify-canvas-dark.png" alt="Business Model Canvas de Spotify, modo oscuro" width="100%" />
 </div>
 
-### Captura 2 — 1440x900 (modo oscuro)
+### Diagrama completo — modo claro
+
+<div align="center">
+  <img src="./docs/spotify-canvas-light.png" alt="Business Model Canvas de Spotify, modo claro" width="100%" />
+</div>
+
+### Ficha ampliada de un bloque (Fuentes de Ingresos)
+
+<div align="center">
+  <img src="./docs/spotify-canvas-ficha-bloque.png" alt="Ficha ampliada de un bloque del canvas" width="100%" />
+</div>
+
+### Ficha ampliada de una lectura clave
+
+<div align="center">
+  <img src="./docs/spotify-canvas-ficha-lectura.png" alt="Ficha ampliada de una lectura clave" width="100%" />
+</div>
+
+### Capturas de validación automática (`archify visual-check`)
 
 <div align="center">
   <img src="./spotify-canvas.visual-check.1440x900.dark.png" alt="Evidencia visual 1440x900 dark" width="100%" />
 </div>
 
-### Captura 3 — 2048x1320 (modo claro)
-
 <div align="center">
   <img src="./spotify-canvas.visual-check.2048x1320.light.png" alt="Evidencia visual 2048x1320 light" width="100%" />
-</div>
-
-### Captura 4 — 2048x1320 (modo oscuro)
-
-<div align="center">
-  <img src="./spotify-canvas.visual-check.2048x1320.dark.png" alt="Evidencia visual 2048x1320 dark" width="100%" />
 </div>
 
 ---
@@ -175,7 +228,7 @@ Capturas generadas como evidencia del diagrama interactivo de la práctica 3:
 ## Resultados y documentación
 
 - [Ver diagrama interactivo en GitHub Pages](https://jesuuusart.github.io/Practicas_INTEGRADORA_220772/Practica03/)
-- [Descargar/ver prompt mejorado](./prompt-v2.md)
+- [Descargar/ver prompt mejorado](./prompt-v2.txt)
 
 La práctica demuestra la capacidad para:
 

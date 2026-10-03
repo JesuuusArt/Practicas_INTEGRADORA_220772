@@ -4973,6 +4973,615 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
       svg [data-node-id], svg [data-edge-from], svg [data-detail], svg [data-detail-anchor], svg [data-legend-hit], svg { transition: none !important; }
     }
   </style>
+<style id="spotify-theme">
+/* Paleta Spotify — capa generada por tools/build-canvas.mjs. */
+
+/* Se declara despues del <style> de Archify y con mas especificidad,
+
+   asi que gana tanto en orden de documento como sobre los presets. */
+
+html[data-theme="dark"] {
+  --bg: #000000;
+  --grid: #121212;
+  --text: #FFFFFF;
+  --text-muted: #B3B3B3;
+  --text-dim: #535353;
+  --text-faint: #B3B3B3;
+  --panel: rgba(18, 18, 18, 0.78);
+  --panel-border: #282828;
+  --lane-fill: rgba(29, 185, 84, 0.06);
+  --lane-stroke: #333333;
+  --arrow: #6A6A6A;
+  --arrow-emphasis: #1DB954;
+  --mask: #0E0E0E;
+  --toolbar-bg: rgba(18, 18, 18, 0.94);
+  --toolbar-border: #333333;
+  --toolbar-text: #FFFFFF;
+  --toolbar-hover: #282828;
+  --toolbar-menu-bg: #121212;
+  --scx-accent: #1DB954;
+  --scx-accent-soft: rgba(29, 185, 84, 0.14);
+  --scx-on-accent: #062E16;
+  --scx-sheet-bg: #0B0B0B;
+  --frontend-fill: rgba(29, 185, 84, 0.14);
+  --frontend-stroke: #1DB954;
+  --backend-fill: rgba(30, 215, 96, 0.14);
+  --backend-stroke: #1ED760;
+  --database-fill: rgba(179, 179, 179, 0.10);
+  --database-stroke: #B3B3B3;
+  --cloud-fill: rgba(30, 215, 96, 0.16);
+  --cloud-stroke: #1ED760;
+  --security-fill: rgba(29, 185, 84, 0.12);
+  --security-stroke: #1DB954;
+  --messagebus-fill: rgba(179, 179, 179, 0.10);
+  --messagebus-stroke: #B3B3B3;
+  --external-fill: rgba(179, 179, 179, 0.10);
+  --external-stroke: #B3B3B3;
+}
+
+html[data-preset][data-theme="dark"] {
+  --bg: #000000;
+  --grid: #121212;
+  --text: #FFFFFF;
+  --text-muted: #B3B3B3;
+  --text-dim: #535353;
+  --text-faint: #B3B3B3;
+  --panel: rgba(18, 18, 18, 0.78);
+  --panel-border: #282828;
+  --lane-fill: rgba(29, 185, 84, 0.06);
+  --lane-stroke: #333333;
+  --arrow: #6A6A6A;
+  --arrow-emphasis: #1DB954;
+  --mask: #0E0E0E;
+  --toolbar-bg: rgba(18, 18, 18, 0.94);
+  --toolbar-border: #333333;
+  --toolbar-text: #FFFFFF;
+  --toolbar-hover: #282828;
+  --toolbar-menu-bg: #121212;
+  --scx-accent: #1DB954;
+  --scx-accent-soft: rgba(29, 185, 84, 0.14);
+  --scx-on-accent: #062E16;
+  --scx-sheet-bg: #0B0B0B;
+  --frontend-fill: rgba(29, 185, 84, 0.14);
+  --frontend-stroke: #1DB954;
+  --backend-fill: rgba(30, 215, 96, 0.14);
+  --backend-stroke: #1ED760;
+  --database-fill: rgba(179, 179, 179, 0.10);
+  --database-stroke: #B3B3B3;
+  --cloud-fill: rgba(30, 215, 96, 0.16);
+  --cloud-stroke: #1ED760;
+  --security-fill: rgba(29, 185, 84, 0.12);
+  --security-stroke: #1DB954;
+  --messagebus-fill: rgba(179, 179, 179, 0.10);
+  --messagebus-stroke: #B3B3B3;
+  --external-fill: rgba(179, 179, 179, 0.10);
+  --external-stroke: #B3B3B3;
+}
+
+html[data-theme="light"] {
+  --bg: #FFFFFF;
+  --grid: #EDEDED;
+  --text: #121212;
+  --text-muted: #535353;
+  --text-dim: #B3B3B3;
+  --text-faint: #6A6A6A;
+  --panel: #FFFFFF;
+  --panel-border: #E4E4E4;
+  --lane-fill: rgba(29, 185, 84, 0.05);
+  --lane-stroke: #D8D8D8;
+  --arrow: #A0A0A0;
+  --arrow-emphasis: #12833C;
+  --mask: #FFFFFF;
+  --toolbar-bg: rgba(255, 255, 255, 0.96);
+  --toolbar-border: #D8D8D8;
+  --toolbar-text: #121212;
+  --toolbar-hover: #F1F1F1;
+  --toolbar-menu-bg: #FFFFFF;
+  --scx-accent: #12833C;
+  --scx-accent-soft: rgba(18, 131, 60, 0.10);
+  --scx-on-accent: #FFFFFF;
+  --scx-sheet-bg: #FFFFFF;
+  --frontend-fill: rgba(29, 185, 84, 0.14);
+  --frontend-stroke: #12833C;
+  --backend-fill: rgba(18, 131, 60, 0.12);
+  --backend-stroke: #0E6B2F;
+  --database-fill: rgba(0, 0, 0, 0.05);
+  --database-stroke: #6A6A6A;
+  --cloud-fill: rgba(18, 131, 60, 0.12);
+  --cloud-stroke: #0E6B2F;
+  --security-fill: rgba(29, 185, 84, 0.14);
+  --security-stroke: #12833C;
+  --messagebus-fill: rgba(0, 0, 0, 0.05);
+  --messagebus-stroke: #767676;
+  --external-fill: rgba(0, 0, 0, 0.05);
+  --external-stroke: #6A6A6A;
+}
+
+html[data-preset][data-theme="light"] {
+  --bg: #FFFFFF;
+  --grid: #EDEDED;
+  --text: #121212;
+  --text-muted: #535353;
+  --text-dim: #B3B3B3;
+  --text-faint: #6A6A6A;
+  --panel: #FFFFFF;
+  --panel-border: #E4E4E4;
+  --lane-fill: rgba(29, 185, 84, 0.05);
+  --lane-stroke: #D8D8D8;
+  --arrow: #A0A0A0;
+  --arrow-emphasis: #12833C;
+  --mask: #FFFFFF;
+  --toolbar-bg: rgba(255, 255, 255, 0.96);
+  --toolbar-border: #D8D8D8;
+  --toolbar-text: #121212;
+  --toolbar-hover: #F1F1F1;
+  --toolbar-menu-bg: #FFFFFF;
+  --scx-accent: #12833C;
+  --scx-accent-soft: rgba(18, 131, 60, 0.10);
+  --scx-on-accent: #FFFFFF;
+  --scx-sheet-bg: #FFFFFF;
+  --frontend-fill: rgba(29, 185, 84, 0.14);
+  --frontend-stroke: #12833C;
+  --backend-fill: rgba(18, 131, 60, 0.12);
+  --backend-stroke: #0E6B2F;
+  --database-fill: rgba(0, 0, 0, 0.05);
+  --database-stroke: #6A6A6A;
+  --cloud-fill: rgba(18, 131, 60, 0.12);
+  --cloud-stroke: #0E6B2F;
+  --security-fill: rgba(29, 185, 84, 0.14);
+  --security-stroke: #12833C;
+  --messagebus-fill: rgba(0, 0, 0, 0.05);
+  --messagebus-stroke: #767676;
+  --external-fill: rgba(0, 0, 0, 0.05);
+  --external-stroke: #6A6A6A;
+}
+html[data-theme="dark"] #node-partners > rect.c-external {
+  fill: rgba(179, 179, 179, 0.10);
+  stroke: #B3B3B3;
+}
+
+html[data-theme="dark"] #node-activities > rect.c-backend {
+  fill: rgba(30, 215, 96, 0.14);
+  stroke: #1ED760;
+}
+
+html[data-theme="dark"] #node-resources > rect.c-database {
+  fill: rgba(29, 185, 84, 0.14);
+  stroke: #1DB954;
+}
+
+html[data-theme="dark"] #node-value > rect.c-cloud {
+  fill: rgba(30, 215, 96, 0.20);
+  stroke: #1ED760;
+  filter: drop-shadow(0 0 7px #1ED76066);
+}
+
+html[data-theme="dark"] #node-relations > rect.c-frontend {
+  fill: rgba(29, 185, 84, 0.14);
+  stroke: #1DB954;
+}
+
+html[data-theme="dark"] #node-channels > rect.c-messagebus {
+  fill: rgba(179, 179, 179, 0.10);
+  stroke: #B3B3B3;
+}
+
+html[data-theme="dark"] #node-segments > rect.c-external {
+  fill: rgba(255, 255, 255, 0.08);
+  stroke: #FFFFFF;
+}
+
+html[data-theme="dark"] #node-costs > rect.c-backend {
+  fill: rgba(138, 138, 138, 0.10);
+  stroke: #8A8A8A;
+}
+
+html[data-theme="dark"] #node-revenue > rect.c-cloud {
+  fill: rgba(30, 215, 96, 0.18);
+  stroke: #1ED760;
+}
+
+html[data-theme="light"] #node-partners > rect.c-external {
+  fill: rgba(0, 0, 0, 0.05);
+  stroke: #6A6A6A;
+}
+
+html[data-theme="light"] #node-activities > rect.c-backend {
+  fill: rgba(18, 131, 60, 0.12);
+  stroke: #0E6B2F;
+}
+
+html[data-theme="light"] #node-resources > rect.c-database {
+  fill: rgba(29, 185, 84, 0.14);
+  stroke: #12833C;
+}
+
+html[data-theme="light"] #node-value > rect.c-cloud {
+  fill: rgba(18, 131, 60, 0.14);
+  stroke: #0B5A26;
+  filter: drop-shadow(0 0 7px #0B5A2666);
+}
+
+html[data-theme="light"] #node-relations > rect.c-frontend {
+  fill: rgba(29, 185, 84, 0.14);
+  stroke: #12833C;
+}
+
+html[data-theme="light"] #node-channels > rect.c-messagebus {
+  fill: rgba(0, 0, 0, 0.05);
+  stroke: #767676;
+}
+
+html[data-theme="light"] #node-segments > rect.c-external {
+  fill: rgba(0, 0, 0, 0.06);
+  stroke: #1A1A1A;
+}
+
+html[data-theme="light"] #node-costs > rect.c-backend {
+  fill: rgba(0, 0, 0, 0.05);
+  stroke: #8A8A8A;
+}
+
+html[data-theme="light"] #node-revenue > rect.c-cloud {
+  fill: rgba(18, 131, 60, 0.12);
+  stroke: #0E6B2F;
+}
+</style>
+<style id="spotify-layer-ui">
+/* ============================================================
+   CAPA SPOTIFY — estilos de la ficha ampliada
+   Inyectado por tools/build-canvas.mjs despues del <style> de
+   Archify, por lo que gana en orden de documento ante empate.
+   ============================================================ */
+
+.scx-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.18rem 0.55rem 0.18rem 0.22rem;
+  border: 1px solid var(--panel-border);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.7rem;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+
+.scx-chip:hover,
+.scx-chip:focus-visible {
+  background: var(--scx-accent-soft);
+  border-color: var(--scx-accent);
+  transform: translateY(-1px);
+}
+
+.scx-chip[aria-current="true"] {
+  background: var(--scx-accent);
+  border-color: var(--scx-accent);
+  color: var(--scx-on-accent);
+}
+
+.scx-chip-num {
+  display: inline-grid;
+  place-items: center;
+  width: 1.15rem;
+  height: 1.15rem;
+  border-radius: 999px;
+  background: var(--scx-node-fill);
+  border: 1px solid var(--scx-node-stroke);
+  color: var(--scx-node-stroke);
+  font-size: 0.62rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.scx-chip[aria-current="true"] .scx-chip-num {
+  background: var(--scx-on-accent);
+  border-color: transparent;
+  color: var(--scx-accent);
+}
+
+/* ---------- lecturas clave (dentro de la ficha) ---------- */
+
+.scx-readings {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.scx-reading {
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.6rem 0.7rem;
+  text-align: left;
+  cursor: pointer;
+  border: 1px solid var(--panel-border);
+  border-radius: 0.55rem;
+  background: var(--panel-bg);
+  color: var(--text-primary);
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.scx-reading:hover,
+.scx-reading:focus-visible {
+  border-color: var(--scx-accent);
+  outline: none;
+}
+
+.scx-reading[aria-current="true"] {
+  border-color: var(--scx-accent);
+  background: var(--scx-accent-soft);
+}
+
+.scx-reading-name {
+  font-weight: 650;
+  font-size: 0.9rem;
+}
+
+.scx-reading-desc {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+/* ---------- overlay ---------- */
+
+.scx-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 900;
+  display: grid;
+  place-items: center;
+  padding: 1.5vh 1.5vw;
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(10px) saturate(120%);
+  -webkit-backdrop-filter: blur(10px) saturate(120%);
+}
+
+.scx-overlay[hidden] { display: none; }
+
+.scx-sheet {
+  display: flex;
+  flex-direction: column;
+  width: min(95vw, 1680px);
+  height: min(94vh, 1040px);
+  border-radius: 1.1rem;
+  border: 1px solid var(--scx-accent);
+  background: var(--scx-sheet-bg);
+  color: var(--text);
+  box-shadow: 0 2.5rem 6rem rgba(0, 0, 0, 0.55);
+  overflow: hidden;
+}
+
+.scx-sheet:focus { outline: none; }
+
+.scx-sheet:focus-visible {
+  outline: 3px solid var(--scx-accent);
+  outline-offset: 2px;
+}
+
+/* ---------- cabecera ---------- */
+
+.scx-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.4rem 1.6rem 1.1rem;
+  border-bottom: 1px solid var(--panel-border);
+  background: linear-gradient(180deg, var(--scx-accent-soft), transparent);
+}
+
+.scx-badge {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 0.9rem;
+  background: var(--scx-node-fill);
+  border: 2px solid var(--scx-node-stroke);
+  color: var(--scx-node-stroke);
+  font-size: 1.35rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.scx-heading { flex: 1 1 auto; min-width: 0; }
+
+.scx-heading h2 {
+  margin: 0;
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+.scx-sub {
+  margin: 0.3rem 0 0;
+  font-size: 0.98rem;
+  color: var(--text-muted);
+}
+
+.scx-tag {
+  display: inline-block;
+  margin: 0.6rem 0 0;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid var(--scx-node-stroke);
+  background: var(--scx-node-fill);
+  color: var(--text-muted);
+  font-size: 0.76rem;
+  letter-spacing: 0.03em;
+}
+
+.scx-tools {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.scx-btn {
+  display: inline-grid;
+  place-items: center;
+  min-width: 2.4rem;
+  height: 2.4rem;
+  padding: 0 0.7rem;
+  border-radius: 999px;
+  border: 1px solid var(--panel-border);
+  background: var(--panel);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.scx-btn:hover:not(:disabled),
+.scx-btn:focus-visible {
+  background: var(--scx-accent);
+  border-color: var(--scx-accent);
+  color: var(--scx-on-accent);
+}
+
+.scx-btn:disabled { opacity: 0.35; cursor: default; }
+
+.scx-btn-close { font-size: 1.3rem; line-height: 1; padding: 0; width: 2.4rem; }
+
+.scx-pos {
+  min-width: 4.2rem;
+  text-align: center;
+  font-size: 0.78rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-faint);
+}
+
+/* ---------- cuerpo ---------- */
+
+.scx-body {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 1.3rem 1.6rem 1.6rem;
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+}
+
+.scx-panel {
+  border: 1px solid var(--panel-border);
+  border-radius: 0.85rem;
+  background: var(--panel);
+  padding: 1rem 1.15rem;
+}
+
+.scx-panel h3 {
+  margin: 0 0 0.6rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--scx-node-stroke);
+}
+
+.scx-panel p { margin: 0; font-size: 1rem; line-height: 1.6; }
+
+.scx-panel ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.45rem; }
+
+.scx-panel li { font-size: 0.93rem; line-height: 1.55; }
+
+.scx-panel li::marker { color: var(--scx-node-stroke); }
+
+.scx-cols {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.scx-cols .scx-panel h3 { color: var(--text-faint); }
+
+/* ---------- relaciones ---------- */
+
+.scx-rel { display: grid; gap: 0.4rem; }
+
+.scx-rel-empty { font-size: 0.88rem; color: var(--text-faint); }
+
+.scx-rel-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.scx-rel-dir {
+  flex: none;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--scx-on-accent);
+  background: var(--scx-accent);
+  border-radius: 999px;
+  padding: 0.1rem 0.55rem;
+}
+
+.scx-rel-item[data-dir="out"] .scx-rel-dir {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--panel-border);
+}
+
+.scx-rel-target { font-weight: 600; color: var(--text); }
+
+.scx-rel-label { color: var(--text-muted); }
+
+/* ---------- pie ---------- */
+
+.scx-foot {
+  flex: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  padding: 0.85rem 1.6rem 1rem;
+  border-top: 1px solid var(--panel-border);
+  background: var(--panel);
+}
+
+.scx-index {
+  flex: 1 1 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.scx-hint { margin: 0; font-size: 0.74rem; color: var(--text-faint); }
+
+.scx-hint kbd {
+  font: inherit;
+  border: 1px solid var(--panel-border);
+  border-radius: 0.3rem;
+  padding: 0 0.25rem;
+}
+
+/* ---------- ajustes de contexto ---------- */
+
+html[data-embed="true"] .scx-overlay,
+html[data-present="true"] .scx-overlay {
+  display: none !important;
+}
+
+@media print {
+  .scx-overlay { display: none !important; }
+}
+
+@media (max-width: 900px) {
+  .scx-head { flex-wrap: wrap; }
+  .scx-tools { width: 100%; justify-content: space-between; }
+  .scx-sheet { width: 96vw; height: 94vh; }
+}
+</style>
 </head>
 <body>
   <!-- Toolbar: theme, live visual style, trace motion, presentation stage, and export.
@@ -5511,60 +6120,7 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
 
     <!-- Info Cards -->
     <div class="cards">
-      <div class="card">
-        <div class="card-header">
-          <div class="card-dot emerald"></div>
-          <h3>Modelo freemium</h3>
-        </div>
-        <ul>
-          <li>&bull; El nivel gratuito con anuncios cubre los costos de adquisición y funciona como escaparate hacia el plan Premium</li>
-          <li>&bull; Premium Individual, Duo, Familiar y Estudiante concentran el ingreso recurrente y la mayor rentabilidad por usuario</li>
-        </ul>
-      </div>
 
-      <div class="card">
-        <div class="card-header">
-          <div class="card-dot cyan"></div>
-          <h3>Estrategia multiplataforma</h3>
-        </div>
-        <ul>
-          <li>&bull; Una sola cuenta y una sola biblioteca en web, iOS, Android, Windows, macOS, Smart TV, altavoces inteligentes y automóvil</li>
-          <li>&bull; Los SDK de terceros (CarPlay, Android Auto, Sonos, Samsung) amplían el canal sin mantener aplicaciones propias</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <div class="card-header">
-          <div class="card-dot rose"></div>
-          <h3>Ventaja competitiva por datos</h3>
-        </div>
-        <ul>
-          <li>&bull; El historial de escucha alimenta las recomendaciones, Discover Weekly, Daily Mix y el informe anual Wrapped</li>
-          <li>&bull; Los datos de audiencia también segmentan la venta publicitaria dentro de la aplicación</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <div class="card-header">
-          <div class="card-dot amber"></div>
-          <h3>Costos dominados por el contenido</h3>
-        </div>
-        <ul>
-          <li>&bull; Las regalías y los anticipos a sellos y artistas son el mayor concepto de gasto y se pagan por reproducción</li>
-          <li>&bull; El resto se reparte entre infraestructura cloud y CDN, marketing, personal de tecnología y soporte al cliente</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <div class="card-header">
-          <div class="card-dot violet"></div>
-          <h3>Cómo leer el diagrama</h3>
-        </div>
-        <ul>
-          <li>&bull; Haz clic en cualquier recuadro: el visor abre su ficha con el detalle, el identificador y las relaciones entrantes y salientes</li>
-          <li>&bull; Usa el control de animación para recorrer el flujo de valor y la barra de capítulos para saltar a cada etapa del modelo</li>
-        </ul>
-      </div>
     </div>
 
   </div>
@@ -14992,5 +15548,382 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
       }
     });
   </script>
+<div class="scx-overlay" id="scx-overlay" hidden>
+  <section class="scx-sheet" id="scx-sheet" role="dialog" aria-modal="true" aria-labelledby="scx-title" aria-describedby="scx-desc">
+    <header class="scx-head">
+      <div class="scx-badge" id="scx-num" aria-hidden="true"></div>
+      <div class="scx-heading">
+        <h2 id="scx-title"></h2>
+        <p class="scx-sub" id="scx-sub"></p>
+        <p class="scx-tag" id="scx-tag"></p>
+      </div>
+      <div class="scx-tools">
+        <button class="scx-btn" id="scx-prev" type="button" aria-label="Bloque anterior">&larr;</button>
+        <span class="scx-pos" id="scx-pos" aria-live="polite"></span>
+        <button class="scx-btn" id="scx-next" type="button" aria-label="Bloque siguiente">&rarr;</button>
+        <button class="scx-btn scx-btn-close" id="scx-close" type="button" aria-label="Cerrar ficha">&times;</button>
+      </div>
+    </header>
+    <div class="scx-body">
+      <div class="scx-panel"><h3>Descripcion</h3><p id="scx-desc"></p></div>
+      <div class="scx-panel"><h3>Elementos clave</h3><ul id="scx-items"></ul></div>
+      <div class="scx-cols">
+        <div class="scx-panel"><h3>Que aporta al modelo</h3><ul id="scx-aporta"></ul></div>
+        <div class="scx-panel"><h3>Riesgos y dependencias</h3><ul id="scx-riesgos"></ul></div>
+      </div>
+      <div class="scx-panel"><h3>Relaciones en el lienzo</h3><div class="scx-rel" id="scx-rel"></div></div>
+      <div class="scx-panel"><h3>Lecturas clave del modelo</h3><div class="scx-readings" id="scx-readings"></div></div>
+    </div>
+    <footer class="scx-foot">
+      <div class="scx-index" id="scx-index"></div>
+      <p class="scx-hint"><kbd>Esc</kbd> cierra &middot; <kbd>&larr;</kbd> <kbd>&rarr;</kbd> recorren los bloques</p>
+    </footer>
+  </section>
+</div>
+<script id="spotify-canvas-detail" type="application/json">{"meta":{"titulo":"Business Model Canvas — Spotify","subtitulo":"Ficha ampliada de cada bloque del modelo de negocio","idioma":"es","nota":"Contenido ampliado de los 9 bloques del Business Model Canvas. Este archivo se inyecta en el HTML generado por Archify y se muestra dentro de la card grande al hacer click sobre cada contenedor del lienzo."},"paleta":{"partners":{"stroke":"#B3B3B3","fill":"rgba(179, 179, 179, 0.10)"},"activities":{"stroke":"#1ED760","fill":"rgba(30, 215, 96, 0.14)"},"resources":{"stroke":"#1DB954","fill":"rgba(29, 185, 84, 0.14)"},"value":{"stroke":"#1ED760","fill":"rgba(30, 215, 96, 0.20)","glow":"0 0 0 2px rgba(29, 185, 84, 0.55)"},"relations":{"stroke":"#1DB954","fill":"rgba(29, 185, 84, 0.14)"},"channels":{"stroke":"#B3B3B3","fill":"rgba(179, 179, 179, 0.10)"},"segments":{"stroke":"#FFFFFF","fill":"rgba(255, 255, 255, 0.08)"},"costs":{"stroke":"#8A8A8A","fill":"rgba(138, 138, 138, 0.10)"},"revenue":{"stroke":"#1ED760","fill":"rgba(30, 215, 96, 0.18)"}},"bloques":{"partners":{"numero":1,"titulo":"Socios Clave","corto":"Socios","subtitulo":"Sellos, artistas y podcasters","tag":"GMF, Warner, Universal, Sony, app stores y fabricantes de hardware","descripcion":"Son los actores externos que hacen posible el modelo: aportan el catalogo que Spotify licencia, fabrican los dispositivos donde se escucha y distribuyen la aplicacion. Spotify no posee discos ni estudios, de modo que todo su negocio descansa en negociar y sostener acuerdos con estos grupos.","elementos":["Sellos discograficos: Sony Music Entertainment, Universal Music Group y Warner Music Group, que concentran la mayor parte del catalogo comercial.","Artistas independientes y podcasters, que aportan contenido propio y sostienen el efecto red de la plataforma.","Distribuidores y agregadores de musica, que conectan catalogos pequenos con el servicio.","Tiendas de aplicaciones: Apple App Store y Google Play, que administran el cobro y la distribucion en movil.","Fabricantes de hardware: smart TVs, altavoces inteligentes, relojes y consolas que preinstalan la aplicacion.","Fabricantes automotrices, que integran el servicio dentro de CarPlay y Android Auto.","Socios tecnologicos y de medios, que financian o promocionan el servicio a cambio de exposicion."],"aporta":["Contenido: sin catalogo licenciado no hay producto que ofrecer.","Alcance: cada acuerdo abre un dispositivo o un pais nuevo para la aplicacion.","Integracion: los SDK de terceros amplian el canal sin exigir aplicaciones propias."],"riesgos":["Renovacion de licencias y cambios en las condiciones de reparto de regalias.","Dependencia de las tiendas de aplicaciones para el cobro en movil."]},"activities":{"numero":2,"titulo":"Actividades Clave","corto":"Actividades","subtitulo":"Licencias, apps e IA","tag":"Catalogo, algoritmos de recomendacion, licencias y publicidad","descripcion":"Las operaciones que Spotify ejecuta de forma continua para mantener el servicio en pie. Tres de ellas son criticas: conseguir el contenido y verificar sus derechos, mantener la plataforma disponible en cada dispositivo y convertir el historial de escucha en recomendaciones que sostienen la participacion del usuario.","elementos":["Gestion de licencias y catalogo: negociacion con sellos, control de derechos, altas y bajas de contenido y mantenimiento de metadatos.","Ingesta y transcodificacion de audio: normalizacion de formato, analisis de audio y publicacion de la version optimizada para streaming.","Desarrollo y mantenimiento multiplataforma: web, iOS, Android, Windows, macOS, Linux y dispositivos de consumo.","Algoritmos de recomendacion y machine learning: motor que personaliza la cola, las mezclas y las novedades.","Monetizacion publicitaria: venta de espacios, segmentacion de audiencias y medicion de campanas.","Datos y experimentacion: analitica de producto, pruebas A/B y metricas de retencion.","Confianza y cumplimiento: moderacion de podcasts, filtrado de contenido explicito y atencion de derechos de autor."],"aporta":["Cumplen la promesa central: contenido legal, disponible y personalizado.","Protegen el costo dominante: verificar los derechos evita sanciones por uso indebido.","Habilitan el ingreso publicitario mediante datos de audiencia agregados."],"riesgos":["Un fallo en la recomendacion reduce las horas de escucha y la conversion a Premium.","Restricciones de las tiendas sobre el cobro limitan la flexibilidad de precios."]},"resources":{"numero":3,"titulo":"Recursos Clave","corto":"Recursos","subtitulo":"Catalogo, datos y CDN","tag":"Cloud, CDN, talento, catalogo y datos de escucha","descripcion":"Los activos que Spotify posee o controla y que no podria comprar en el momento de necesitarlos. El recurso mas defendible no es el catalogo, que esta licenciado, sino la combinacion de plataforma, datos de escucha e infraestructura de entrega global.","elementos":["Plataforma tecnologica: servicios backend, APIs publicas y clientes nativos para cada sistema operativo.","Catalogo musical y de podcasts, con sus metadatos, portadas y politicas de disponibilidad.","Datos de escucha: que se escucha, cuanto tiempo, en que orden y con que interaccion explicita (me gusta, saltado, guardado).","Infraestructura cloud y CDN: entrega de audio a escala global con baja latencia y bajo costo por byte.","Identidad, cuentas y pago: inicio de sesion, perfiles, planes y facturacion en mas de 180 paises.","Talento: ingenieria, producto, diseno, datos, algoritmica, ventas y area legal.","Marca Spotify: activo de marketing con reconocimiento global y alto valor de recuerdo."],"aporta":["Los datos de escucha son la base del diferenciador frente a servicios sin historico.","La escala de la CDN permite mantener el margen incluso con miles de millones de reproducciones.","La marca reduce el costo de adquisicion frente a un competidor sin reconocimiento."],"riesgos":["El catalogo es licenciado y puede cambiar de manos o de condiciones.","Las politicas de privacidad limitan que datos pueden usarse con fines publicitarios."]},"value":{"numero":4,"titulo":"Propuesta de Valor","corto":"Valor","subtitulo":"Musica y podcasts donde sea","tag":"Gratis con anuncios | Premium sin anuncios, offline y alta calidad | Descubrimiento personalizado","descripcion":"Es el centro del lienzo: la razon por la que un usuario elige Spotify frente a comprar canciones, descargar archivos o usar la radio. La propuesta se sostiene sobre tres pilares: acceso inmediato y legal, una experiencia gratuita que no interrumpe con anuncios, y una capa Premium que elimina esas fricciones.","elementos":["Streaming legal de musica y podcasts sin necesidad de tener la coleccion.","Nivel gratuito con anuncios, que cubre el costo de servir el catalogo y funciona como escaparate.","Premium sin anuncios, con reproduccion offline y calidad de audio ajustable.","Descubrimiento hiperpersonalizado: Discover Weekly, Release Radar, Daily Mix, On Repeat y el informe anual Wrapped.","Playlists colaborativas y perfiles publicos, que convierten el consumo en algo social.","Biblioteca unificada entre movil, escritorio, TV, auto y altavoces, con una sola cuenta.","Podcasts y audiolibros en la misma aplicacion, lo que amplía el tiempo de uso."],"aporta":["Elimina la friccion del formato: el usuario escucha sin buscar ni comprar.","El nivel gratuito reduce la friccion de entrada y sostiene la base de usuarios.","Premium monetiza la intensidad de uso de quienes ya demostraron interes."],"riesgos":["Competencia con precios bajos de Apple Music y Amazon Music.","El valor percibido cae si el catalogo completo no esta disponible en el mercado local."]},"relations":{"numero":5,"titulo":"Relaciones con Clientes","corto":"Relaciones","subtitulo":"Autoservicio y comunidad","tag":"Playlists, Wrapped anual, soporte y comunidad","descripcion":"Describen como Spotify se relaciona con cada segmento. Predomina el autoservicio: la cuenta se gestiona sola, sin friccion comercial. Sobre esa base se construyen mecanismos de vinculo emocional y comunidad que elevan el costo de abandono y generan contenido que la propia plataforma puede consumir.","elementos":["Autoservicio: alta de cuenta, eleccion de plan, cambio de metodo de pago y gestion de dispositivos sin intervencion humana.","Playlists colaborativas y perfiles publicos, que convierten el uso en una experiencia social.","Engagement periodico: Wrapped, el resumen anual que personaliza los datos de escucha de cada usuario.","Recomendaciones y notificaciones, que mantienen viva la relacion sin esfuerzo comercial.","Soporte al cliente: autosayuda en la aplicacion, foro comunitario y atencion directa para casos escalados.","Programas para creadores: herramientas de analitica y monetizacion para artistas y podcasters."],"aporta":["El autoservicio mantiene el costo de soporte muy bajo frente al volumen de usuarios.","Las senales de comunidad generan contenido publicable que reduce el costo de marketing.","El soporte se reserva para los casos que afectan al ingreso, no para la operacion diaria."],"riesgos":["Un autoservicio deficiente en la facturacion genera desconexion y reembolso.","La experiencia social exige moderacion permanente del contenido de usuario."]},"channels":{"numero":6,"titulo":"Canales","corto":"Canales","subtitulo":"Web, movil, escritorio y TV","tag":"Altavoces, CarPlay, Android Auto, Smart TV y escritorio","descripcion":"Los canales son el modo en que la propuesta de valor llega al cliente. La estrategia es clara: Spotify controla sus propias aplicaciones en los dispositivos que administra y delega en SDK de terceros todo lo que exige certificacion costosa, como el automóvil, los altavoces y las teles.","elementos":["Aplicaciones nativas propias para iOS y Android, que concentran la mayor parte del uso.","Cliente de escritorio para Windows, macOS y Linux, orientado a escucha larga y descarga para uso offline.","Web Player, que cubre dispositivos sin sistema operativo movil y sirve de respaldo.","Smart TVs y consolas, que llevan la musica a la sala sin necesidad de telefono.","Altavoces inteligentes, donde la musica funciona como respuesta a una orden de voz.","Automotriz: CarPlay y Android Auto, un canal de alto valor por su tiempo de escucha.","Wearables y relojes inteligentes, que extienden el uso a las actividades diarias del usuario.","Integraciones con servicios de terceros mediante un SDK publico."],"aporta":["Una sola cuenta y una sola biblioteca en todos los dispositivos.","Los SDK de terceros amplian el canal sin mantener aplicaciones propias.","Cada integracion anade tiempo de escucha sin un costo marginal alto."],"riesgos":["Comisiones de las tiendas de aplicaciones sobre el cobro en movil.","Dependencia de la disponibilidad y de los terminos de la API de cada fabricante."]},"segments":{"numero":7,"titulo":"Segmentos de Clientes","corto":"Segmentos","subtitulo":"Free, Premium y anunciantes","tag":"Individual, Duo, Familiar, Estudiante, anunciantes y creadores","descripcion":"No hay un unico cliente, sino cuatro grupos con necesidades y productos distintos. Los usuarios gratuitos financian el catalogo y son el embudo de conversion; los suscriptores Premium producen el ingreso; los anunciantes compran atencion segmentada; y los creadores aportan el contenido que ambos lados consumen.","elementos":["Oyentes del plan gratuito: usuarios que aceptan anuncios y mantienen la sesion a cambio de acceso sin costo.","Suscriptores Premium Individual: el segmento de mayor valor por usuario.","Premium Duo y Familiar: planes que extienden la suscripcion a varias personas del hogar.","Premium Estudiante: precio rebajado a cambio de verificacion de estatus, con buen costo de adquisicion y alta retencion.","Anunciantes: marcas que compran espacios dentro de la aplicacion y en Spotify Audience Network.","Creadores: artistas, podcasters y sellos que publican contenido y usan las analiticas de Spotify for Artists.","Negocios: locales comerciales que usan el servicio como ambiente sonoro y cuentan con facturacion propia."],"aporta":["El gratuito sostiene el volumen que hace viable el acuerdo con los sellos.","Premium aporta el ingreso recurrente y con mejor margen.","La publicidad monetiza el inventario del nivel gratuito.","El plan Estudiante funciona como puerta de entrada a una suscripcion de largo plazo."],"riesgos":["La conversion del gratuito a Premium es el indicador critico del modelo freemium.","El precio del plan Estudiante debe compensarse con el costo de servirlo y su retencion."]},"costs":{"numero":8,"titulo":"Estructura de Costos","corto":"Costos","subtitulo":"Regalias y licencias de contenido, infraestructura cloud y CDN, marketing, personal y atencion al cliente","tag":"El contenido concentra la mayor parte del gasto","descripcion":"Es una estructura de costos predominantemente variable: el gasto crece con el uso. Eso hace que el margen dependa de dos palancas, cuanto se paga por reproduccion y cuanto se cobra por suscripcion. El contenido se lleva la mayor parte de la factura, y por eso la negociacion con los sellos define la rentabilidad del negocio.","elementos":["Regalias por reproduccion: pago a sellos y artistas por cada vez que se escucha una pista.","Anticipos y minimos garantizados: acuerdos con artistas y podcasters que fijan pagos aunque el uso sea bajo.","Licencias de contenido: derechos de audio, obras visuales y, en algunos mercados, libros y audiolibros.","Infraestructura cloud y CDN: ancho de banda, computo y almacenamiento para entregar audio a escala global.","Marketing y adquisicion: campanas de marca, referidos y alianzas con fabricantes.","Nominas: ingenieria, producto, datos, diseno, ventas, soporte y areas administrativa y legal.","Atencion al cliente y cumplimiento: soporte, moderacion, pagos locales y derechos de autor."],"aporta":["El costo por reproduccion determina si cada minuto de escucha deja margen.","La escala de la CDN permite que el costo de entrega caiga a centavos por usuario.","El marketing de marca es mas barato que la adquisicion por busqueda de palabra clave."],"riesgos":["Un aumento en las tarifas de los sellos presiona el margen de forma directa.","La estructura variable exige que el crecimiento de usuarios venga acompanado de ingreso."]},"revenue":{"numero":9,"titulo":"Fuentes de Ingresos","corto":"Ingresos","subtitulo":"Suscripciones Premium recurrentes, publicidad del nivel gratuito y Spotify Audience Network","tag":"Ingreso principal: la suscripcion","descripcion":"El ingreso tiene dos naturalezas distintas y complementarias. La suscripcion Premium es recurrente, predecible y con mejor margen; la publicidad monetiza el trafico del nivel gratuito y financia el acceso de miles de millones de personas. Spotify Audience Network anade una tercera via al vender anuncios dentro del contenido de podcast.","elementos":["Suscripciones Premium: Individual, Duo, Familiar y Estudiante, con cobro mensual o anual.","Planes y promociones: periodos de prueba, planes familiares regionalizados y descuentos student verificados.","Publicidad en el nivel gratuito: spots de audio y display segmentados por contexto, pais, edad y dispositivo.","Spotify Audience Network: inventario publicitario dentro del reproductor de podcasts.","Ingresos por acuerdos: fabricantes que incluyen la prueba Premium o el servicio junto al dispositivo.","Otros ingresos: licencias de tecnologia, servicios para marcas y colaboraciones puntuales."],"aporta":["La suscripcion aporta la mayor parte del ingreso y es la fuente mas predecible.","La publicidad convierte usuarios gratuitos en ingresos sin sumar al costo de suscripcion.","Audience Network monetiza un inventario que antes no generaba directo."],"riesgos":["La dependencia de la suscripcion hace que cualquier caida de churn duela de inmediato.","La publicidad es ciclica: sigue al ciclo economico de los anunciantes."]}},"tarjetas":[{"id":"freemium","numero":"A","titulo":"Como leer el diagrama","subtitulo":"Ficha ampliada, capitulos y exportaciones del visor","descripcion":"El lienzo es interactivo en dos niveles: la navegacion nativa del visor de Archify y una capa de detalle ampliada propia de esta practica. Ambas funcionan a la vez, sobre el mismo diagrama.","elementos":["Haz clic en cualquier recuadro del lienzo, en un chip del indice o en una de las dos tarjetas inferiores: se abre una ficha que ocupa casi toda la pantalla con el detalle completo del bloque.","La ficha incluye descripcion, elementos clave, que aporta, riesgos y las relaciones entrantes y salientes deducidas del propio lienzo.","T alterna el tema, S recorre los estilos visuales, F activa la presentacion y E abre la exportacion."],"aporta":["Reduce la friccion de entrada: el usuario puede probar el servicio sin pagar.","Sostiene el volumen de reproducciones que exige la estructura de regalias."],"riesgos":["La tasa de conversion entre gratuito y Premium es el indicador que sostiene todo el modelo."],"corto":"Como leer"},{"id":"lectura","numero":"B","titulo":"Ruta de estudio en tres capitulos","subtitulo":"Orden recomendado para recorrer el modelo","descripcion":"El visor incluye una barra de capitulos que reenfoca el lienzo por etapas. Es la ruta mas eficiente para estudiar y para explicar el modelo en clase.","elementos":["Construccion de la oferta: socios, actividades, recursos y propuesta de valor.","Entrega al cliente: propuesta de valor, relaciones, canales y segmentos.","Costos e ingresos: segmentos, fuentes de ingresos y estructura de costos."],"aporta":["El recorrido por capitulos ordena el estudio: oferta, entrega al cliente y dinero.","La ficha ampliada convierte el diagrama en material de estudio, no solo en una imagen."],"riesgos":["La ficha es una capa añadida: el HTML sigue siendo valido como artefacto Archify aunque se desactive."],"corto":"Ruta"}],"relaciones":{"partners":{"entrantes":[],"salientes":[{"dir":"out","id":"activities","title":"Actividades Clave","label":"entregan contenido"}]},"activities":{"entrantes":[{"dir":"in","id":"partners","title":"Socios Clave","label":"entregan contenido"}],"salientes":[{"dir":"out","id":"resources","title":"Recursos Clave","label":"operan sobre"}]},"resources":{"entrantes":[{"dir":"in","id":"activities","title":"Actividades Clave","label":"operan sobre"}],"salientes":[{"dir":"out","id":"value","title":"Propuesta de Valor","label":"habilitan la oferta"}]},"value":{"entrantes":[{"dir":"in","id":"resources","title":"Recursos Clave","label":"habilitan la oferta"}],"salientes":[{"dir":"out","id":"relations","title":"Relaciones con Clientes","label":"entrega valor"},{"dir":"out","id":"channels","title":"Canales","label":"distribuye"}]},"relations":{"entrantes":[{"dir":"in","id":"value","title":"Propuesta de Valor","label":"entrega valor"}],"salientes":[{"dir":"out","id":"segments","title":"Segmentos de Clientes","label":"fideliza"}]},"channels":{"entrantes":[{"dir":"in","id":"value","title":"Propuesta de Valor","label":"distribuye"}],"salientes":[{"dir":"out","id":"segments","title":"Segmentos de Clientes","label":"distribución"}]},"segments":{"entrantes":[{"dir":"in","id":"relations","title":"Relaciones con Clientes","label":"fideliza"},{"dir":"in","id":"channels","title":"Canales","label":"distribución"}],"salientes":[{"dir":"out","id":"revenue","title":"Fuentes de Ingresos","label":"monetización"}]},"costs":{"entrantes":[],"salientes":[]},"revenue":{"entrantes":[{"dir":"in","id":"segments","title":"Segmentos de Clientes","label":"monetización"}],"salientes":[]}}}</script>
+<script id="spotify-layer-runtime">
+/* ============================================================
+   CAPA SPOTIFY — runtime de la ficha ampliada
+   Se inyecta al final del <body> del HTML de Archify.
+   No modifica el SVG, por lo que las exportaciones PNG/SVG/WebM
+   y el modo embed siguen produciendo el diagrama puro.
+   ============================================================ */
+(function () {
+  'use strict';
+
+  var dataEl = document.getElementById('spotify-canvas-detail');
+  var overlay = document.getElementById('scx-overlay');
+  var sheet = document.getElementById('scx-sheet');
+  var svg = document.querySelector('.diagram-container svg');
+  if (!dataEl || !overlay || !sheet || !svg) return;
+
+  var DATA;
+  try {
+    DATA = JSON.parse(dataEl.textContent);
+  } catch (_) {
+    return;
+  }
+
+  var NODES = DATA.bloques || {};
+  var CARDS = DATA.tarjetas || [];
+  var RELATIONS = DATA.relaciones || {};
+  var PALETTE = DATA.paleta || {};
+  var ORDER = Object.keys(NODES).sort(function (a, b) {
+    return (NODES[a].numero || 0) - (NODES[b].numero || 0);
+  });
+
+  var el = {
+    badge: document.getElementById('scx-num'),
+    title: document.getElementById('scx-title'),
+    sub: document.getElementById('scx-sub'),
+    tag: document.getElementById('scx-tag'),
+    desc: document.getElementById('scx-desc'),
+    items: document.getElementById('scx-items'),
+    aporta: document.getElementById('scx-aporta'),
+    riesgos: document.getElementById('scx-riesgos'),
+    rel: document.getElementById('scx-rel'),
+    index: document.getElementById('scx-index'),
+    readings: document.getElementById('scx-readings'),
+    pos: document.getElementById('scx-pos'),
+    prev: document.getElementById('scx-prev'),
+    next: document.getElementById('scx-next'),
+    close: document.getElementById('scx-close')
+  };
+
+  var current = null;
+  var lastTrigger = null;
+
+  /* ---------- helpers ---------- */
+
+  function setText(node, value) {
+    if (node) node.textContent = value == null ? '' : String(value);
+  }
+
+  function setList(node, items) {
+    if (!node) return;
+    node.textContent = '';
+    (items || []).forEach(function (item) {
+      var li = document.createElement('li');
+      li.textContent = String(item);
+      node.appendChild(li);
+    });
+  }
+
+  function makeChip(kind, id, numero, titulo, corto) {
+    var chip = document.createElement('button');
+    chip.type = 'button';
+    chip.className = 'scx-chip';
+    chip.setAttribute('data-id', id);
+    chip.setAttribute('data-kind', kind);
+    chip.setAttribute('aria-current', 'false');
+    chip.title = titulo;
+    chip.setAttribute('aria-label', 'Abrir ficha ampliada: ' + titulo);
+
+    var num = document.createElement('span');
+    num.className = 'scx-chip-num';
+    num.textContent = numero;
+
+    var name = document.createElement('span');
+    name.textContent = corto || titulo;
+
+    chip.appendChild(num);
+    chip.appendChild(name);
+    return chip;
+  }
+
+  /* ---------- relaciones del lienzo ---------- */
+
+  function renderRelations(id) {
+    var host = el.rel;
+    if (!host) return;
+    host.textContent = '';
+    var group = RELATIONS[id];
+    var rows = []
+      .concat((group && group.entrantes) || [])
+      .concat((group && group.salientes) || []);
+    if (!rows.length) {
+      var empty = document.createElement('p');
+      empty.className = 'scx-rel-empty';
+      empty.textContent = 'Este bloque no tiene conexiones directas con otros.';
+      host.appendChild(empty);
+      return;
+    }
+    rows.forEach(function (entry) {
+      var row = document.createElement('div');
+      row.className = 'scx-rel-item';
+      row.setAttribute('data-dir', entry.dir);
+
+      var dir = document.createElement('span');
+      dir.className = 'scx-rel-dir';
+      dir.textContent = entry.dir === 'in' ? 'Recibe de' : 'Entrega a';
+
+      var target = document.createElement('span');
+      target.className = 'scx-rel-target';
+      target.textContent = entry.title;
+
+      var label = document.createElement('span');
+      label.className = 'scx-rel-label';
+      label.textContent = entry.label ? entry.label : '';
+
+      row.appendChild(dir);
+      row.appendChild(target);
+      row.appendChild(label);
+      host.appendChild(row);
+    });
+  }
+
+  /* ---------- pintado ---------- */
+
+  function applyAccent(id) {
+    var accent = PALETTE[id] || {};
+    if (accent.stroke) sheet.style.setProperty('--scx-node-stroke', accent.stroke);
+    if (accent.fill) sheet.style.setProperty('--scx-node-fill', accent.fill);
+  }
+
+  function syncChips() {
+    var chips = document.querySelectorAll('.scx-chip, .scx-reading');
+    for (var i = 0; i < chips.length; i += 1) {
+      var on = chips[i].getAttribute('data-id') === current;
+      chips[i].setAttribute('aria-current', on ? 'true' : 'false');
+    }
+  }
+
+  function paintNode(id) {
+    var node = NODES[id];
+    if (!node) return;
+    setText(el.badge, node.numero);
+    setText(el.title, node.titulo);
+    setText(el.sub, node.subtitulo);
+    setText(el.tag, node.tag);
+    setText(el.desc, node.descripcion);
+    setList(el.items, node.elementos);
+    setList(el.aporta, node.aporta);
+    setList(el.riesgos, node.riesgos);
+    renderRelations(id);
+    applyAccent(id);
+    setText(el.pos, node.numero + ' / ' + ORDER.length);
+  }
+
+  function paintCard(id) {
+    var card = null;
+    for (var i = 0; i < CARDS.length; i += 1) {
+      if (CARDS[i].id === id) card = CARDS[i];
+    }
+    if (!card) return;
+    setText(el.badge, card.numero);
+    setText(el.title, card.titulo);
+    setText(el.sub, card.subtitulo);
+    setText(el.tag, 'Ficha ampliada · ' + card.id);
+    setText(el.desc, card.descripcion);
+    setList(el.items, card.elementos);
+    setList(el.aporta, card.aporta);
+    setList(el.riesgos, card.riesgos);
+    renderRelations(card.id);
+    applyAccent(card.id);
+    setText(el.pos, card.numero + ' / ' + CARDS.length);
+  }
+
+  /* ---------- apertura y cierre ---------- */
+
+  function open(kind, id, trigger) {
+    if (kind === 'node') {
+      if (!NODES[id]) return;
+      current = id;
+      paintNode(id);
+    } else {
+      if (!id) return;
+      current = id;
+      paintCard(id);
+    }
+    lastTrigger = trigger || null;
+    overlay.removeAttribute('hidden');
+    document.documentElement.setAttribute('data-scx-open', 'true');
+    syncChips();
+    if (el.close) el.close.focus();
+  }
+
+  function close() {
+    if (overlay.hasAttribute('hidden')) return;
+    overlay.setAttribute('hidden', '');
+    document.documentElement.removeAttribute('data-scx-open');
+    syncChips();
+    var target = lastTrigger;
+    lastTrigger = null;
+    if (target && typeof target.focus === 'function') target.focus();
+  }
+
+  function isOpen() {
+    return !overlay.hasAttribute('hidden');
+  }
+
+  function step(delta) {
+    if (!current) return;
+    var pos = ORDER.indexOf(current);
+    if (pos < 0) return;
+    var id = ORDER[(pos + delta + ORDER.length) % ORDER.length];
+    current = id;
+    paintNode(id);
+    syncChips();
+  }
+
+  function isEditable(target) {
+    var tag = target && target.tagName ? target.tagName.toLowerCase() : '';
+    return tag === 'input' || tag === 'textarea' || tag === 'select' || !!(target && target.isContentEditable);
+  }
+
+  /* ---------- eventos ---------- */
+
+  svg.addEventListener('click', function (event) {
+    if (isOpen()) return;
+    if (event.defaultPrevented) return;
+    if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    if (isEditable(event.target)) return;
+    if (svg.hasAttribute('data-route-picking') || svg.hasAttribute('data-route-active')) return;
+    var group = event.target.closest ? event.target.closest('[data-node-id]') : null;
+    if (!group) return;
+    var id = group.getAttribute('data-node-id');
+    if (!NODES[id]) return;
+    open('node', id, group);
+  }, true);
+
+  svg.addEventListener('keydown', function (event) {
+    if (isOpen()) return;
+    if (event.key !== 'Enter' && event.key !== ' ' && event.key !== 'Spacebar') return;
+    var group = event.target.closest ? event.target.closest('[data-node-id]') : null;
+    if (!group) return;
+    var id = group.getAttribute('data-node-id');
+    if (!NODES[id]) return;
+    event.preventDefault();
+    open('node', id, group);
+  }, true);
+
+  /* El indice vive dentro de la ficha (overlay) y no en el flujo de la pagina.
+     Motivo tecnico: Archify.readerLayout mide unicamente .header,
+     .guided-views y .cards para encajar el SVG en la ventana; un bloque mas
+     en el flujo queda fuera de ese presupuesto, settleOverflow() reduce el
+     ancho, measure() lo restaura y el lazo no converge. Como overlay, la
+     ficha no altera el alto del documento. */
+  function onChipClick(event) {
+    var chip = event.target.closest ? event.target.closest('.scx-chip, .scx-reading') : null;
+    if (!chip) return;
+    var id = chip.getAttribute('data-id');
+    if (chip.getAttribute('data-kind') === 'card') {
+      open('card', id, chip);
+      return;
+    }
+    if (!NODES[id]) return;
+    current = id;
+    paintNode(id);
+    syncChips();
+  }
+
+  el.index.addEventListener('click', onChipClick);
+
+  ORDER.forEach(function (id) {
+    el.index.appendChild(makeChip('node', id, NODES[id].numero, NODES[id].titulo, NODES[id].corto));
+  });
+
+  if (el.readings && CARDS.length) {
+    el.readings.textContent = '';
+    CARDS.forEach(function (card) {
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'scx-reading';
+      btn.setAttribute('data-id', card.id);
+      btn.setAttribute('data-kind', 'card');
+      btn.setAttribute('aria-current', 'false');
+
+      var name = document.createElement('span');
+      name.className = 'scx-reading-name';
+      name.textContent = card.titulo;
+
+      var desc = document.createElement('span');
+      desc.className = 'scx-reading-desc';
+      desc.textContent = card.subtitulo || '';
+
+      btn.appendChild(name);
+      btn.appendChild(desc);
+      el.readings.appendChild(btn);
+    });
+    el.readings.addEventListener('click', onChipClick);
+  }
+
+  /* ---------- controles ---------- */
+
+  el.prev.addEventListener('click', function () { step(-1); });
+  el.next.addEventListener('click', function () { step(1); });
+  el.close.addEventListener('click', close);
+
+  overlay.addEventListener('click', function (event) {
+    if (event.target === overlay) close();
+  });
+
+  document.addEventListener('keydown', function (event) {
+    if (!isOpen()) return;
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      close();
+    } else if (event.key === 'ArrowLeft') {
+      event.preventDefault();
+      step(-1);
+    } else if (event.key === 'ArrowRight') {
+      event.preventDefault();
+      step(1);
+    } else if (event.key === 'Tab') {
+      var focusable = sheet.querySelectorAll('button:not(:disabled)');
+      if (!focusable.length) return;
+      var first = focusable[0];
+      var last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    }
+  }, true);
+})();
+</script>
 </body>
 </html>

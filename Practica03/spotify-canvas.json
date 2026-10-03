@@ -1,281 +1,240 @@
 {
-    "schema_version":  1,
-    "diagram_type":  "architecture",
-    "meta":  {
-                 "title":  "Business Model Canvas — Spotify",
-                 "quality_profile":  "showcase",
-                 "animation":  "trace",
-                 "viewBox":  [
-                                 1350,
-                                 690
-                             ],
-                 "views":  [
-                               {
-                                   "id":  "oferta",
-                                   "label":  "Construcción de la oferta",
-                                   "focus":  [
-                                                 "partners",
-                                                 "activities",
-                                                 "resources",
-                                                 "value"
-                                             ],
-                                   "note":  "Los socios y las actividades producen los recursos que hacen posible la propuesta de valor."
-                               },
-                               {
-                                   "id":  "entrega",
-                                   "label":  "Entrega al cliente",
-                                   "focus":  [
-                                                 "value",
-                                                 "relations",
-                                                 "channels",
-                                                 "segments"
-                                             ],
-                                   "note":  "La propuesta de valor viaja por canales y relaciones hasta cada segmento de clientes."
-                               },
-                               {
-                                   "id":  "dinero",
-                                   "label":  "Costos e ingresos",
-                                   "focus":  [
-                                                 "segments",
-                                                 "revenue",
-                                                 "costs"
-                                             ],
-                                   "note":  "Los segmentos se monetizan por suscripción y publicidad, y ese ingreso financia la estructura de costos."
-                               }
-                           ]
-             },
-    "components":  [
-                       {
-                           "id":  "partners",
-                           "type":  "external",
-                           "label":  "Socios Clave",
-                           "sublabel":  "Sellos, artistas y podcasters",
-                           "tag":  "GMF, Warner, Universal, Sony, app stores",
-                           "pos":  [
-                                       30,
-                                       30
-                                   ],
-                           "size":  [
-                                        162,
-                                        430
-                                    ]
-                       },
-                       {
-                           "id":  "activities",
-                           "type":  "backend",
-                           "label":  "Actividades Clave",
-                           "sublabel":  "Licencias, apps e IA",
-                           "tag":  "Catálogo, algoritmos y publicidad",
-                           "pos":  [
-                                       312,
-                                       30
-                                   ],
-                           "size":  [
-                                        162,
-                                        190
-                                    ]
-                       },
-                       {
-                           "id":  "resources",
-                           "type":  "database",
-                           "label":  "Recursos Clave",
-                           "sublabel":  "Catálogo, datos y CDN",
-                           "tag":  "Cloud, CDN, talento, marcas y datos",
-                           "pos":  [
-                                       312,
-                                       270
-                                   ],
-                           "size":  [
-                                        162,
-                                        190
-                                    ]
-                       },
-                       {
-                           "id":  "value",
-                           "type":  "cloud",
-                           "label":  "Propuesta de Valor",
-        "sublabel": "Música y podcasts donde sea",
-                           "tag":  "Gratis con anuncios · Premium sin anuncios",
-                           "pos":  [
-                                       594,
-                                       30
-                                   ],
-                           "size":  [
-                                        162,
-                                        430
-                                    ]
-                       },
-                       {
-                           "id":  "relations",
-                           "type":  "frontend",
-                           "label":  "Relaciones con Clientes",
-                           "sublabel":  "Autoservicio y comunidad",
-                           "tag":  "Playlists, Wrapped anual y soporte",
-                           "pos":  [
-                                       876,
-                                       30
-                                   ],
-                           "size":  [
-                                        162,
-                                        190
-                                    ]
-                       },
-                       {
-                           "id":  "channels",
-                           "type":  "messagebus",
-                           "label":  "Canales",
-                           "sublabel":  "Web, móvil, escritorio y TV",
-                           "tag":  "Altavoces, CarPlay y Android Auto",
-                           "pos":  [
-                                       876,
-                                       270
-                                   ],
-                           "size":  [
-                                        162,
-                                        190
-                                    ]
-                       },
-                       {
-                           "id":  "segments",
-                           "type":  "external",
-                           "label":  "Segmentos de Clientes",
-                           "sublabel":  "Free, Premium y anunciantes",
-                           "tag":  "Individual, Duo, Familiar y Estudiante",
-                           "pos":  [
-                                       1158,
-                                       30
-                                   ],
-                           "size":  [
-                                        162,
-                                        430
-                                    ]
-                       },
-                       {
-                           "id":  "costs",
-                           "type":  "backend",
-                           "label":  "Estructura de Costos",
-                           "sublabel":  "Regalías y licencias de contenido, infraestructura cloud y CDN, marketing, personal y atención al cliente",
-                           "tag":  "El contenido concentra la mayor parte del gasto",
-                           "pos":  [
-                                       30,
-                                       510
-                                   ],
-                           "size":  [
-                                        690,
-                                        150
-                                    ]
-                       },
-                       {
-                           "id":  "revenue",
-                           "type":  "cloud",
-                           "label":  "Fuentes de Ingresos",
-                           "sublabel":  "Suscripciones Premium recurrentes, publicidad del nivel gratuito y Spotify Audience Network",
-                           "tag":  "Ingreso principal: la suscripción",
-                           "pos":  [
-                                       760,
-                                       510
-                                   ],
-                           "size":  [
-                                        560,
-                                        150
-                                    ]
-                       }
-                   ],
-    "connections":  [
-                        {
-                            "id":  "partners-activities",
-                            "from":  "partners",
-                            "to":  "activities",
-                            "label":  "entregan contenido"
-                        },
-                        {
-                            "id":  "activities-resources",
-                            "from":  "activities",
-                            "to":  "resources",
-                            "label":  "operan sobre",
-                            "labelDy":  24
-                        },
-                        {
-                            "id":  "resources-value",
-                            "from":  "resources",
-                            "to":  "value",
-                            "label":  "habilitan la oferta"
-                        },
-                        {
-                            "id":  "value-relations",
-                            "from":  "value",
-                            "to":  "relations",
-                            "label":  "entrega valor",
-                            "variant":  "emphasis"
-                        },
-                        {
-                            "id":  "value-channels",
-                            "from":  "value",
-                            "to":  "channels",
-                            "label":  "distribuye"
-                        },
-                        {
-                            "id":  "relations-segments",
-                            "from":  "relations",
-                            "to":  "segments",
-                            "label":  "fideliza"
-                        },
-                        {
-                            "id":  "channels-segments",
-                            "from":  "channels",
-                            "to":  "segments",
-                            "label":  "distribución"
-                        },
-                        {
-                            "id":  "segments-revenue",
-                            "from":  "segments",
-                            "to":  "revenue",
-                            "label":  "monetización",
-                            "variant":  "emphasis",
-                            "fromSide":  "bottom",
-                            "toSide":  "top"
-                        }
-                    ],
-    "cards":  [
-                  {
-                      "dot":  "emerald",
-                      "title":  "Modelo freemium",
-                      "items":  [
-                                    "El nivel gratuito con anuncios cubre los costos de adquisición y funciona como escaparate hacia el plan Premium",
-                                    "Premium Individual, Duo, Familiar y Estudiante concentran el ingreso recurrente y la mayor rentabilidad por usuario"
-                                ]
-                  },
-                  {
-                      "dot":  "cyan",
-                      "title":  "Estrategia multiplataforma",
-                      "items":  [
-                                    "Una sola cuenta y una sola biblioteca en web, iOS, Android, Windows, macOS, Smart TV, altavoces inteligentes y automóvil",
-                                    "Los SDK de terceros (CarPlay, Android Auto, Sonos, Samsung) amplían el canal sin mantener aplicaciones propias"
-                                ]
-                  },
-                  {
-                      "dot":  "rose",
-                      "title":  "Ventaja competitiva por datos",
-                      "items":  [
-                                    "El historial de escucha alimenta las recomendaciones, Discover Weekly, Daily Mix y el informe anual Wrapped",
-                                    "Los datos de audiencia también segmentan la venta publicitaria dentro de la aplicación"
-                                ]
-                  },
-                  {
-                      "dot":  "amber",
-                      "title":  "Costos dominados por el contenido",
-                      "items":  [
-                                    "Las regalías y los anticipos a sellos y artistas son el mayor concepto de gasto y se pagan por reproducción",
-                                    "El resto se reparte entre infraestructura cloud y CDN, marketing, personal de tecnología y soporte al cliente"
-                                ]
-                  },
-                  {
-                      "dot":  "violet",
-                      "title":  "Cómo leer el diagrama",
-                      "items":  [
-                                    "Haz clic en cualquier recuadro: el visor abre su ficha con el detalle, el identificador y las relaciones entrantes y salientes",
-                                    "Usa el control de animación para recorrer el flujo de valor y la barra de capítulos para saltar a cada etapa del modelo"
-                                ]
-                  }
-              ]
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Business Model Canvas — Spotify",
+    "quality_profile": "showcase",
+    "animation": "trace",
+    "viewBox": [
+      1350,
+      690
+    ],
+    "views": [
+      {
+        "id": "oferta",
+        "label": "Construcción de la oferta",
+        "focus": [
+          "partners",
+          "activities",
+          "resources",
+          "value"
+        ],
+        "note": "Los socios y las actividades producen los recursos que hacen posible la propuesta de valor."
+      },
+      {
+        "id": "entrega",
+        "label": "Entrega al cliente",
+        "focus": [
+          "value",
+          "relations",
+          "channels",
+          "segments"
+        ],
+        "note": "La propuesta de valor viaja por canales y relaciones hasta cada segmento de clientes."
+      },
+      {
+        "id": "dinero",
+        "label": "Costos e ingresos",
+        "focus": [
+          "segments",
+          "revenue",
+          "costs"
+        ],
+        "note": "Los segmentos se monetizan por suscripción y publicidad, y ese ingreso financia la estructura de costos."
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "partners",
+      "type": "external",
+      "label": "Socios Clave",
+      "sublabel": "Sellos, artistas y podcasters",
+      "tag": "GMF, Warner, Universal, Sony, app stores",
+      "pos": [
+        30,
+        30
+      ],
+      "size": [
+        162,
+        430
+      ]
+    },
+    {
+      "id": "activities",
+      "type": "backend",
+      "label": "Actividades Clave",
+      "sublabel": "Licencias, apps e IA",
+      "tag": "Catálogo, algoritmos y publicidad",
+      "pos": [
+        312,
+        30
+      ],
+      "size": [
+        162,
+        190
+      ]
+    },
+    {
+      "id": "resources",
+      "type": "database",
+      "label": "Recursos Clave",
+      "sublabel": "Catálogo, datos y CDN",
+      "tag": "Cloud, CDN, talento, marcas y datos",
+      "pos": [
+        312,
+        270
+      ],
+      "size": [
+        162,
+        190
+      ]
+    },
+    {
+      "id": "value",
+      "type": "cloud",
+      "label": "Propuesta de Valor",
+      "sublabel": "Música y podcasts donde sea",
+      "tag": "Gratis con anuncios · Premium sin anuncios",
+      "pos": [
+        594,
+        30
+      ],
+      "size": [
+        162,
+        430
+      ]
+    },
+    {
+      "id": "relations",
+      "type": "frontend",
+      "label": "Relaciones con Clientes",
+      "sublabel": "Autoservicio y comunidad",
+      "tag": "Playlists, Wrapped anual y soporte",
+      "pos": [
+        876,
+        30
+      ],
+      "size": [
+        162,
+        190
+      ]
+    },
+    {
+      "id": "channels",
+      "type": "messagebus",
+      "label": "Canales",
+      "sublabel": "Web, móvil, escritorio y TV",
+      "tag": "Altavoces, CarPlay y Android Auto",
+      "pos": [
+        876,
+        270
+      ],
+      "size": [
+        162,
+        190
+      ]
+    },
+    {
+      "id": "segments",
+      "type": "external",
+      "label": "Segmentos de Clientes",
+      "sublabel": "Free, Premium y anunciantes",
+      "tag": "Individual, Duo, Familiar y Estudiante",
+      "pos": [
+        1158,
+        30
+      ],
+      "size": [
+        162,
+        430
+      ]
+    },
+    {
+      "id": "costs",
+      "type": "backend",
+      "label": "Estructura de Costos",
+      "sublabel": "Regalías y licencias de contenido, infraestructura cloud y CDN, marketing, personal y atención al cliente",
+      "tag": "El contenido concentra la mayor parte del gasto",
+      "pos": [
+        30,
+        510
+      ],
+      "size": [
+        690,
+        150
+      ]
+    },
+    {
+      "id": "revenue",
+      "type": "cloud",
+      "label": "Fuentes de Ingresos",
+      "sublabel": "Suscripciones Premium recurrentes, publicidad del nivel gratuito y Spotify Audience Network",
+      "tag": "Ingreso principal: la suscripción",
+      "pos": [
+        760,
+        510
+      ],
+      "size": [
+        560,
+        150
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "partners-activities",
+      "from": "partners",
+      "to": "activities",
+      "label": "entregan contenido"
+    },
+    {
+      "id": "activities-resources",
+      "from": "activities",
+      "to": "resources",
+      "label": "operan sobre",
+      "labelDy": 24
+    },
+    {
+      "id": "resources-value",
+      "from": "resources",
+      "to": "value",
+      "label": "habilitan la oferta"
+    },
+    {
+      "id": "value-relations",
+      "from": "value",
+      "to": "relations",
+      "label": "entrega valor",
+      "variant": "emphasis"
+    },
+    {
+      "id": "value-channels",
+      "from": "value",
+      "to": "channels",
+      "label": "distribuye"
+    },
+    {
+      "id": "relations-segments",
+      "from": "relations",
+      "to": "segments",
+      "label": "fideliza"
+    },
+    {
+      "id": "channels-segments",
+      "from": "channels",
+      "to": "segments",
+      "label": "distribución"
+    },
+    {
+      "id": "segments-revenue",
+      "from": "segments",
+      "to": "revenue",
+      "label": "monetización",
+      "variant": "emphasis",
+      "fromSide": "bottom",
+      "toSide": "top"
+    }
+  ],
+  "cards": []
 }

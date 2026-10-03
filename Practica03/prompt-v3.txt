@@ -1,0 +1,213 @@
+================================================================================
+PRACTICA 03 - BOCETO DE MODELO CANVAS CON ARCHIFY
+PROMPT v3 (SOLICITUD CON PALETA DE SPOTIFY + CARDS DE DETALLE EXPANDIBLES)
+================================================================================
+
+Aplicacion elegida: Spotify (streaming musical y de podcasts, multiplataforma).
+Herramienta de generacion: Archify.
+
+--------------------------------------------------------------------------------
+REQUISITOS DEL PROFESOR (MODIFICACIONES SOLICITADAS)
+--------------------------------------------------------------------------------
+
+1. Los prompts NO se deben entregar en .md, sino en archivos .txt. (aplicado: 
+   v1 y v2 convertidos a .txt; se anade este v3 como propuesta de mejora).
+
+2. Partiendo del Modelo Canvas hecho previamente (Spotify), generarlo nuevamente
+   con Archify pero con la PALETA DE COLORES DE SPOTIFY en los componentes/
+   contenedores de cada bloque del Business Model Canvas.
+
+3. En cada card o en cada contenedor del Modelo Canvas, al darle click debe
+   salir una card MAS GRANDE que contenga MAS INFORMACION de ese contenedor al
+   que se le haya dado click. Esta card debe ocupar CASI TODO EL ESPACIO.
+
+4. Debe seguir siendo un diagrama interactivo (manteniendo las capacidades de
+   Archify para visualizacion, foco, rutas, etc.), pero con esta capa de detalle
+   expandible por bloque.
+
+5. Todo esto debe ir dentro de la carpeta Practica03.
+
+--------------------------------------------------------------------------------
+PROMPT v3 - PROPUESTA PARA ARCHIFY
+--------------------------------------------------------------------------------
+
+Crea un Business Model Canvas interactivo (tipo `architecture`, calidad
+`showcase`) para Spotify, plataforma multiplataforma de streaming musical y
+de podcasts.
+
+DISEÑO Y DISPOSICION (mantener la estructura optimizada de v2):
+- Reticula con 5 columnas. Bloques de 280 px de ancho y pasillos de 140 px
+  entre columnas para garantizar espacio libre a etiquetas de relacion.
+- Fila superior: 7 bloques. Fila inferior: Estructura de Costos e Ingresos.
+- Columna 1: Socios Clave (ambas filas). Columna 2: Actividades Clave (arriba) y
+  Recursos Clave (abajo). Columna 3 central: Propuesta de Valor (ambas filas).
+  Columna 4: Relaciones con Clientes (arriba) y Canales (abajo). Columna 5:
+  Segmentos de Clientes (ambas filas).
+- Fila inferior: Estructura de Costos (izquierda, bajo columnas 1-2); Fuentes
+  de Ingresos (derecha, bajo columnas 4-5).
+- ViewBox compacto y legible (1335 x 640) para escritorio 1440x900, asegurando
+  legibilidad >= 6px.
+
+PALETA DE COLORES DE SPOTIFY (aplicada por tipo de componente):
+Aplica esta paleta para distinguir visualmente los 9 bloques, manteniendo
+coherencia con identidad Spotify:
+
+- Socios Clave (external): color principal #1DB954 (Spotify Green), borde
+  #1ed760, relleno semitransparente para mantener legibilidad en tema claro/
+  oscuro.
+- Actividades Clave (backend): #1DB954 con variante para diferenciar de
+  recursos.
+- Recursos Clave (database): #191414 (negro Spotify) con acento #1DB954.
+- Propuesta de Valor (cloud/emphasis): #1ed760 (verde claro) como bloque
+  central destacado.
+- Relaciones con Clientes (frontend): #1DB954.
+- Canales (messagebus): #191414 con borde #1DB954.
+- Segmentos de Clientes (external): #1ed760.
+- Estructura de Costos (backend): #535353 (gris Spotify) con acento para
+  marcar gasto.
+- Fuentes de Ingresos (cloud): #1DB954, enfatizar ingresos recurrentes.
+
+Usa variantes (emphasis/dashed) cuando corresponda para resaltar flujos
+criticos. Mantén contraste alto en modo claro y oscuro.
+
+ETIQUETAS BREVES (máx ~45 caracteres):
+- Socios Clave: "Sellos, artistas y podcasters"
+- Actividades Clave: "Licencias, apps e IA"
+- Recursos Clave: "Catálogo, datos y CDN"
+- Propuesta de Valor: "Música y podcasts donde sea"
+- Relaciones con Clientes: "Autoservicio y comunidad"
+- Canales: "Web, móvil, escritorio y TV"
+- Segmentos de Clientes: "Free, Premium y anunciantes"
+- Estructura de Costos: "Regalías y licencias de contenido, infraestructura cloud y CDN, marketing, personal y atención al cliente"
+- Fuentes de Ingresos: "Suscripciones Premium recurrentes, publicidad del nivel gratuito y Spotify Audience Network"
+
+TAGS COMPLEMENTARIOS (resumidos) para enriquecer vista de detalle:
+- Socios Clave: "GMF, Warner, Universal, Sony, app stores, fabricantes de hardware"
+- Actividades Clave: "Catálogo, algoritmos de recomendación, licencias, publicidad"
+- Recursos Clave: "Cloud, CDN, talento, catálogo, datos de escucha"
+- Propuesta de Valor: "Gratis con anuncios · Premium sin anuncios, offline y alta calidad · Descubrimiento personalizado"
+- Relaciones con Clientes: "Playlists, Wrapped anual, soporte"
+- Canales: "Altavoces, CarPlay, Android Auto, Smart TV, escritorio"
+- Segmentos de Clientes: "Individual, Duo, Familiar, Estudiante, anunciantes, creadores"
+- Estructura de Costos: "El contenido concentra la mayor parte del gasto"
+- Fuentes de Ingresos: "Ingreso principal: la suscripción"
+
+RELACIONES (etiquetas cortas y precisas):
+- Socios Clave -> Actividades Clave: "entregan contenido"
+- Actividades Clave -> Recursos Clave: "operan sobre" (labelDy 24)
+- Recursos Clave -> Propuesta de Valor: "habilitan la oferta"
+- Propuesta de Valor -> Relaciones con Clientes: "entrega valor" (variant emphasis)
+- Propuesta de Valor -> Canales: "distribuye"
+- Relaciones con Clientes -> Segmentos de Clientes: "fideliza"
+- Canales -> Segmentos de Clientes: "distribución"
+- Segmentos de Clientes -> Fuentes de Ingresos: "monetización" (variant emphasis, fromSide bottom, toSide top)
+
+TARJETAS DE RESUMEN (cards): modelo freemium, estrategia multiplataforma, ventaja
+competitiva por datos, costos dominados por el contenido, "Cómo leer el diagrama".
+
+INTERACTIVIDAD - MODAL DE DETALLE EXPANDIBLE POR BLOQUE:
+Generar un diagrama interactivo que mantenga TODAS las funcionalidades del visor
+de Archify (foco, passport semántico, ruta, vistas guiadas, temas claro/oscuro,
+exportaciones). Adicionalmente, implementar una capa interactiva de detalle:
+
+REQUISITO CRÍTICO: Al hacer CLICK en CUALQUIER contenedor/card de bloque
+(component) del Business Model Canvas, debe abrirse una CARD GRANDE (modal de
+detalle) que ocupe CASI TODO EL ESPACIO disponible en el visor. Esta card debe
+mostrar INFORMACIÓN MUCHO MÁS DETALLADA sobre ese bloque concreto.
+
+Contenido ampliado por bloque (para mostrar en la card grande al hacer click):
+
+1. Socios Clave
+   - Descripción: actores esenciales para licenciar catálogo y distribuir Spotify
+   - Detalle: Sellos discográficos (Sony Music, Universal Music Group, Warner
+     Music Group), artistas independientes y podcasters, plataformas de
+     distribución (Apple App Store, Google Play), fabricantes de hardware
+     (Samsung, Sonos, Bose), fabricantes de automóviles (con integración
+     CarPlay/Android Auto), partners tecnológicos y agregadores.
+   - Valor aportado: contenido, alcance, distribución, integración nativa.
+   - Dependencias: negociaciones de licenciamiento, ventanas de lanzamiento.
+
+2. Actividades Clave
+   - Curación y gestión de catálogo, adquisición y renovación de licencias,
+   - Desarrollo y mantenimiento multiplataforma (web, móvil, escritorio, TV,
+     wearables, auto), algoritmos de recomendación y ML, ingestion y
+     transcodificación de audio, monetización publicitaria, moderación y
+     cumplimiento, análisis de datos y experimentación.
+
+3. Recursos Clave
+   - Plataforma tecnológica (microservicios, APIs), catálogo musical y de
+     podcasts, datos de escucha (implicit/explicit feedback), infraestructura
+     cloud y CDN (entrega de audio a escala global), identidad y cuentas,
+     talento (ingeniería, producto, datos, legales), marca y propiedad
+     intelectual.
+
+4. Propuesta de Valor
+   - Acceso legal y ágil a música y podcasts multiplataforma, experiencia
+     gratuita sostenible (ad-supported) como funnel, Premium sin anuncios,
+     modo offline, calidad de audio ajustable, descubrimiento hiperpersonalizado
+     (Discover Weekly, Release Radar, Daily Mix, Wrapped), playlists
+     colaborativas, biblioteca unificada entre dispositivos.
+
+5. Relaciones con Clientes
+   - Autoservicio (cuenta, planes, dispositivos), comunidad (playlists
+     compartidas, perfiles públicos), engagement anual (Wrapped), atención al
+     cliente y autoayuda, notificaciones personalizadas, feedback loops para
+     mejorar recomendaciones.
+
+6. Canales
+   - Aplicaciones nativas (iOS, Android), cliente de escritorio (Windows/macOS),
+     Web Player, aplicaciones para Smart TV, altavoces inteligentes (Sonos,
+     Google Home, Amazon Alexa), sistemas de infoentretenimiento automotriz
+     (CarPlay, Android Auto), partners de hardware y embebidos.
+
+7. Segmentos de Clientes
+   - Free: oyentes ocasionales/activos con aversión a pago o descubrimiento.
+   - Premium: suscriptores Individual, Duo, Familiar, Estudiante (alto ARPU).
+   - Anunciantes: marcas que buscan targeting basado en contexto/audio.
+   - Creadores: artistas, podcasters y sellos (ecosistema de monetización y
+     analytics).
+
+8. Estructura de Costos
+   - Costos variables dominantes: regalías por reproducción (streaming rates),
+     anticipos y mínimos garantizados, licencias de contenido (audio, ME),
+     infraestructura cloud/CDN (ancho de banda y cómputo), marketing y
+     adquisición de usuarios, nóminas, atención al cliente, cumplimiento
+     legal y taxes.
+
+9. Fuentes de Ingresos
+   - Suscripciones Premium (ingreso recurrente, principal), publicidad en tier
+     gratuito (CPM/targeting), Spotify Audience Network (monetización
+     podcast), promociones/planes y otros ingresos (partnerships).
+
+COMPORTAMIENTO DEL MODAL:
+- Al hacer CLICK en cualquier nodo/componente (bloque del canvas): abrir modal
+  overlay a pantalla completa o casi completa (ocupa ~95% del viewport), con
+  fondo semitransparente que permite cerrar haciendo click fuera o con botón
+  de cierre (X).
+- Mostrar: título del bloque, subtítulo, tag, descripción completa, elementos
+  clave (listas), métricas/relevancia para Spotify, y relaciones entrantes/
+  salientes desde ese bloque.
+- Cerrar: click en backdrop, botón X, tecla Escape.
+- Animación suave, sin romper el layout SVG original. Mantener estado de foco/
+  tema.
+- Accesible (aria-labels, focus trap ligero).
+
+IMPLEMENTACIÓN TÉCNICA (para Archify HTML generado):
+Inyectar CSS para el modal (.canvas-detail-modal, .canvas-detail-backdrop,
+.canvas-detail-content) con dimensiones: width: 95vw, height: 95vh, max-width
+95vw, max-height 95vh, centrado, scroll interno si contenido excede. Añadir JS
+que:
+- Escuche clicks en [data-node-id] (o grupos SVG de componentes) para abrir
+  modal con datos del bloque correspondiente (usar data attributes existentes:
+  data-node-label, data-node-sublabel, data-node-tag + contenido ampliado).
+- Construya el contenido del modal dinámicamente desde un mapa JSON embebido
+  con la información detallada de los 9 bloques (detalle.json inline).
+- Preservar todas las interacciones nativas del visor (no interferir con
+  passport/route/finder). El modal debe estar por encima del resto (z-index alto).
+
+IDIOMA: Español. Sin inventar marca del producto. Mantener nombres exactos
+cuando corresponda.
+
+Generar el HTML final autónomo, validado con calidad showcase (0 errores, 0
+advertencias). No modificar la geometría de rutas más allá de lo necesario para
+legibilidad; priorizar que el modal NO afecte al layout SVG del canvas.

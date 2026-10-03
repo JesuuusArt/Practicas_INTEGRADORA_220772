@@ -1,0 +1,58 @@
+{
+  "herramienta": "tools/build-canvas.mjs",
+  "generado": "2026-10-01T06:36:15.829Z",
+  "flujo": [
+    "validate",
+    "render",
+    "postprocesado",
+    "check"
+  ],
+  "spec": {
+    "path": "spotify-canvas.json",
+    "sha256": "850aa6628585c40fa3dce907e1d841f148603ec9f1372e1f55a9f078635c5b6f"
+  },
+  "paleta": {
+    "path": "spotify-canvas.paleta.json",
+    "sha256": "2b24040e91b7d7fd8fa4c3dc7b4aac2c551a8eb68fef88930325fb06ab667248"
+  },
+  "detalle": {
+    "path": "spotify-canvas.detalle.json",
+    "sha256": "e40a6414eabbdb0aff006e61f82baeb121a91f4ca2f21e694733eeb36cef698a"
+  },
+  "base": {
+    "path": ".build/spotify-canvas.base.html",
+    "sha256": "5f827a1a6a217d778f80dc729268c21a161142db4a5a8a5ff02b37d1f81b15b7"
+  },
+  "artifact": {
+    "path": "spotify-canvas.html",
+    "sha256": "1272d7680c95db55f627e2c9110ee0c4c86938dd682bfd8daabd855788f4c297"
+  },
+  "validate": {
+    "ok": true,
+    "checks": [
+      "single_svg",
+      "finite_svg",
+      "orthogonal_arrows",
+      "label_route_clearance",
+      "relationship_crossings",
+      "relationship_corridors",
+      "container_border_runs",
+      "route_rhythm",
+      "legend_clearance"
+    ]
+  },
+  "check": {
+    "ok": true,
+    "checks": [
+      "single_svg",
+      "finite_svg",
+      "orthogonal_arrows",
+      "label_route_clearance",
+      "relationship_crossings",
+      "relationship_corridors",
+      "container_border_runs",
+      "route_rhythm",
+      "legend_clearance"
+    ]
+  }
+}
