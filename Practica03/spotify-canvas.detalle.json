@@ -1,0 +1,308 @@
+{
+  "meta": {
+    "titulo": "Business Model Canvas — Spotify",
+    "subtitulo": "Ficha ampliada de cada bloque del modelo de negocio",
+    "idioma": "es",
+    "nota": "Contenido ampliado de los 9 bloques del Business Model Canvas. Este archivo se inyecta en el HTML generado por Archify y se muestra dentro de la card grande al hacer click sobre cada contenedor del lienzo."
+  },
+  "bloques": {
+    "partners": {
+      "numero": 1,
+      "titulo": "Socios Clave",
+      "corto": "Socios",
+      "subtitulo": "Sellos, artistas y podcasters",
+      "tag": "GMF, Warner, Universal, Sony, app stores y fabricantes de hardware",
+      "descripcion": "Son los actores externos que hacen posible el modelo: aportan el catalogo que Spotify licencia, fabrican los dispositivos donde se escucha y distribuyen la aplicacion. Spotify no posee discos ni estudios, de modo que todo su negocio descansa en negociar y sostener acuerdos con estos grupos.",
+      "elementos": [
+        "Sellos discograficos: Sony Music Entertainment, Universal Music Group y Warner Music Group, que concentran la mayor parte del catalogo comercial.",
+        "Artistas independientes y podcasters, que aportan contenido propio y sostienen el efecto red de la plataforma.",
+        "Distribuidores y agregadores de musica, que conectan catalogos pequenos con el servicio.",
+        "Tiendas de aplicaciones: Apple App Store y Google Play, que administran el cobro y la distribucion en movil.",
+        "Fabricantes de hardware: smart TVs, altavoces inteligentes, relojes y consolas que preinstalan la aplicacion.",
+        "Fabricantes automotrices, que integran el servicio dentro de CarPlay y Android Auto.",
+        "Socios tecnologicos y de medios, que financian o promocionan el servicio a cambio de exposicion."
+      ],
+      "aporta": [
+        "Contenido: sin catalogo licenciado no hay producto que ofrecer.",
+        "Alcance: cada acuerdo abre un dispositivo o un pais nuevo para la aplicacion.",
+        "Integracion: los SDK de terceros amplian el canal sin exigir aplicaciones propias."
+      ],
+      "riesgos": [
+        "Renovacion de licencias y cambios en las condiciones de reparto de regalias.",
+        "Dependencia de las tiendas de aplicaciones para el cobro en movil."
+      ]
+    },
+    "activities": {
+      "numero": 2,
+      "titulo": "Actividades Clave",
+      "corto": "Actividades",
+      "subtitulo": "Licencias, apps e IA",
+      "tag": "Catalogo, algoritmos de recomendacion, licencias y publicidad",
+      "descripcion": "Las operaciones que Spotify ejecuta de forma continua para mantener el servicio en pie. Tres de ellas son criticas: conseguir el contenido y verificar sus derechos, mantener la plataforma disponible en cada dispositivo y convertir el historial de escucha en recomendaciones que sostienen la participacion del usuario.",
+      "elementos": [
+        "Gestion de licencias y catalogo: negociacion con sellos, control de derechos, altas y bajas de contenido y mantenimiento de metadatos.",
+        "Ingesta y transcodificacion de audio: normalizacion de formato, analisis de audio y publicacion de la version optimizada para streaming.",
+        "Desarrollo y mantenimiento multiplataforma: web, iOS, Android, Windows, macOS, Linux y dispositivos de consumo.",
+        "Algoritmos de recomendacion y machine learning: motor que personaliza la cola, las mezclas y las novedades.",
+        "Monetizacion publicitaria: venta de espacios, segmentacion de audiencias y medicion de campanas.",
+        "Datos y experimentacion: analitica de producto, pruebas A/B y metricas de retencion.",
+        "Confianza y cumplimiento: moderacion de podcasts, filtrado de contenido explicito y atencion de derechos de autor."
+      ],
+      "aporta": [
+        "Cumplen la promesa central: contenido legal, disponible y personalizado.",
+        "Protegen el costo dominante: verificar los derechos evita sanciones por uso indebido.",
+        "Habilitan el ingreso publicitario mediante datos de audiencia agregados."
+      ],
+      "riesgos": [
+        "Un fallo en la recomendacion reduce las horas de escucha y la conversion a Premium.",
+        "Restricciones de las tiendas sobre el cobro limitan la flexibilidad de precios."
+      ]
+    },
+    "resources": {
+      "numero": 3,
+      "titulo": "Recursos Clave",
+      "corto": "Recursos",
+      "subtitulo": "Catalogo, datos y CDN",
+      "tag": "Cloud, CDN, talento, catalogo y datos de escucha",
+      "descripcion": "Los activos que Spotify posee o controla y que no podria comprar en el momento de necesitarlos. El recurso mas defendible no es el catalogo, que esta licenciado, sino la combinacion de plataforma, datos de escucha e infraestructura de entrega global.",
+      "elementos": [
+        "Plataforma tecnologica: servicios backend, APIs publicas y clientes nativos para cada sistema operativo.",
+        "Catalogo musical y de podcasts, con sus metadatos, portadas y politicas de disponibilidad.",
+        "Datos de escucha: que se escucha, cuanto tiempo, en que orden y con que interaccion explicita (me gusta, saltado, guardado).",
+        "Infraestructura cloud y CDN: entrega de audio a escala global con baja latencia y bajo costo por byte.",
+        "Identidad, cuentas y pago: inicio de sesion, perfiles, planes y facturacion en mas de 180 paises.",
+        "Talento: ingenieria, producto, diseno, datos, algoritmica, ventas y area legal.",
+        "Marca Spotify: activo de marketing con reconocimiento global y alto valor de recuerdo."
+      ],
+      "aporta": [
+        "Los datos de escucha son la base del diferenciador frente a servicios sin historico.",
+        "La escala de la CDN permite mantener el margen incluso con miles de millones de reproducciones.",
+        "La marca reduce el costo de adquisicion frente a un competidor sin reconocimiento."
+      ],
+      "riesgos": [
+        "El catalogo es licenciado y puede cambiar de manos o de condiciones.",
+        "Las politicas de privacidad limitan que datos pueden usarse con fines publicitarios."
+      ]
+    },
+    "value": {
+      "numero": 4,
+      "titulo": "Propuesta de Valor",
+      "corto": "Valor",
+      "subtitulo": "Musica y podcasts donde sea",
+      "tag": "Gratis con anuncios | Premium sin anuncios, offline y alta calidad | Descubrimiento personalizado",
+      "descripcion": "Es el centro del lienzo: la razon por la que un usuario elige Spotify frente a comprar canciones, descargar archivos o usar la radio. La propuesta se sostiene sobre tres pilares: acceso inmediato y legal, una experiencia gratuita que no interrumpe con anuncios, y una capa Premium que elimina esas fricciones.",
+      "elementos": [
+        "Streaming legal de musica y podcasts sin necesidad de tener la coleccion.",
+        "Nivel gratuito con anuncios, que cubre el costo de servir el catalogo y funciona como escaparate.",
+        "Premium sin anuncios, con reproduccion offline y calidad de audio ajustable.",
+        "Descubrimiento hiperpersonalizado: Discover Weekly, Release Radar, Daily Mix, On Repeat y el informe anual Wrapped.",
+        "Playlists colaborativas y perfiles publicos, que convierten el consumo en algo social.",
+        "Biblioteca unificada entre movil, escritorio, TV, auto y altavoces, con una sola cuenta.",
+        "Podcasts y audiolibros en la misma aplicacion, lo que amplía el tiempo de uso."
+      ],
+      "aporta": [
+        "Elimina la friccion del formato: el usuario escucha sin buscar ni comprar.",
+        "El nivel gratuito reduce la friccion de entrada y sostiene la base de usuarios.",
+        "Premium monetiza la intensidad de uso de quienes ya demostraron interes."
+      ],
+      "riesgos": [
+        "Competencia con precios bajos de Apple Music y Amazon Music.",
+        "El valor percibido cae si el catalogo completo no esta disponible en el mercado local."
+      ]
+    },
+    "relations": {
+      "numero": 5,
+      "titulo": "Relaciones con Clientes",
+      "corto": "Relaciones",
+      "subtitulo": "Autoservicio y comunidad",
+      "tag": "Playlists, Wrapped anual, soporte y comunidad",
+      "descripcion": "Describen como Spotify se relaciona con cada segmento. Predomina el autoservicio: la cuenta se gestiona sola, sin friccion comercial. Sobre esa base se construyen mecanismos de vinculo emocional y comunidad que elevan el costo de abandono y generan contenido que la propia plataforma puede consumir.",
+      "elementos": [
+        "Autoservicio: alta de cuenta, eleccion de plan, cambio de metodo de pago y gestion de dispositivos sin intervencion humana.",
+        "Playlists colaborativas y perfiles publicos, que convierten el uso en una experiencia social.",
+        "Engagement periodico: Wrapped, el resumen anual que personaliza los datos de escucha de cada usuario.",
+        "Recomendaciones y notificaciones, que mantienen viva la relacion sin esfuerzo comercial.",
+        "Soporte al cliente: autosayuda en la aplicacion, foro comunitario y atencion directa para casos escalados.",
+        "Programas para creadores: herramientas de analitica y monetizacion para artistas y podcasters."
+      ],
+      "aporta": [
+        "El autoservicio mantiene el costo de soporte muy bajo frente al volumen de usuarios.",
+        "Las senales de comunidad generan contenido publicable que reduce el costo de marketing.",
+        "El soporte se reserva para los casos que afectan al ingreso, no para la operacion diaria."
+      ],
+      "riesgos": [
+        "Un autoservicio deficiente en la facturacion genera desconexion y reembolso.",
+        "La experiencia social exige moderacion permanente del contenido de usuario."
+      ]
+    },
+    "channels": {
+      "numero": 6,
+      "titulo": "Canales",
+      "corto": "Canales",
+      "subtitulo": "Web, movil, escritorio y TV",
+      "tag": "Altavoces, CarPlay, Android Auto, Smart TV y escritorio",
+      "descripcion": "Los canales son el modo en que la propuesta de valor llega al cliente. La estrategia es clara: Spotify controla sus propias aplicaciones en los dispositivos que administra y delega en SDK de terceros todo lo que exige certificacion costosa, como el automóvil, los altavoces y las teles.",
+      "elementos": [
+        "Aplicaciones nativas propias para iOS y Android, que concentran la mayor parte del uso.",
+        "Cliente de escritorio para Windows, macOS y Linux, orientado a escucha larga y descarga para uso offline.",
+        "Web Player, que cubre dispositivos sin sistema operativo movil y sirve de respaldo.",
+        "Smart TVs y consolas, que llevan la musica a la sala sin necesidad de telefono.",
+        "Altavoces inteligentes, donde la musica funciona como respuesta a una orden de voz.",
+        "Automotriz: CarPlay y Android Auto, un canal de alto valor por su tiempo de escucha.",
+        "Wearables y relojes inteligentes, que extienden el uso a las actividades diarias del usuario.",
+        "Integraciones con servicios de terceros mediante un SDK publico."
+      ],
+      "aporta": [
+        "Una sola cuenta y una sola biblioteca en todos los dispositivos.",
+        "Los SDK de terceros amplian el canal sin mantener aplicaciones propias.",
+        "Cada integracion anade tiempo de escucha sin un costo marginal alto."
+      ],
+      "riesgos": [
+        "Comisiones de las tiendas de aplicaciones sobre el cobro en movil.",
+        "Dependencia de la disponibilidad y de los terminos de la API de cada fabricante."
+      ]
+    },
+    "segments": {
+      "numero": 7,
+      "titulo": "Segmentos de Clientes",
+      "corto": "Segmentos",
+      "subtitulo": "Free, Premium y anunciantes",
+      "tag": "Individual, Duo, Familiar, Estudiante, anunciantes y creadores",
+      "descripcion": "No hay un unico cliente, sino cuatro grupos con necesidades y productos distintos. Los usuarios gratuitos financian el catalogo y son el embudo de conversion; los suscriptores Premium producen el ingreso; los anunciantes compran atencion segmentada; y los creadores aportan el contenido que ambos lados consumen.",
+      "elementos": [
+        "Oyentes del plan gratuito: usuarios que aceptan anuncios y mantienen la sesion a cambio de acceso sin costo.",
+        "Suscriptores Premium Individual: el segmento de mayor valor por usuario.",
+        "Premium Duo y Familiar: planes que extienden la suscripcion a varias personas del hogar.",
+        "Premium Estudiante: precio rebajado a cambio de verificacion de estatus, con buen costo de adquisicion y alta retencion.",
+        "Anunciantes: marcas que compran espacios dentro de la aplicacion y en Spotify Audience Network.",
+        "Creadores: artistas, podcasters y sellos que publican contenido y usan las analiticas de Spotify for Artists.",
+        "Negocios: locales comerciales que usan el servicio como ambiente sonoro y cuentan con facturacion propia."
+      ],
+      "aporta": [
+        "El gratuito sostiene el volumen que hace viable el acuerdo con los sellos.",
+        "Premium aporta el ingreso recurrente y con mejor margen.",
+        "La publicidad monetiza el inventario del nivel gratuito.",
+        "El plan Estudiante funciona como puerta de entrada a una suscripcion de largo plazo."
+      ],
+      "riesgos": [
+        "La conversion del gratuito a Premium es el indicador critico del modelo freemium.",
+        "El precio del plan Estudiante debe compensarse con el costo de servirlo y su retencion."
+      ]
+    },
+    "costs": {
+      "numero": 8,
+      "titulo": "Estructura de Costos",
+      "corto": "Costos",
+      "subtitulo": "Regalias y licencias de contenido, infraestructura cloud y CDN, marketing, personal y atencion al cliente",
+      "tag": "El contenido concentra la mayor parte del gasto",
+      "descripcion": "Es una estructura de costos predominantemente variable: el gasto crece con el uso. Eso hace que el margen dependa de dos palancas, cuanto se paga por reproduccion y cuanto se cobra por suscripcion. El contenido se lleva la mayor parte de la factura, y por eso la negociacion con los sellos define la rentabilidad del negocio.",
+      "elementos": [
+        "Regalias por reproduccion: pago a sellos y artistas por cada vez que se escucha una pista.",
+        "Anticipos y minimos garantizados: acuerdos con artistas y podcasters que fijan pagos aunque el uso sea bajo.",
+        "Licencias de contenido: derechos de audio, obras visuales y, en algunos mercados, libros y audiolibros.",
+        "Infraestructura cloud y CDN: ancho de banda, computo y almacenamiento para entregar audio a escala global.",
+        "Marketing y adquisicion: campanas de marca, referidos y alianzas con fabricantes.",
+        "Nominas: ingenieria, producto, datos, diseno, ventas, soporte y areas administrativa y legal.",
+        "Atencion al cliente y cumplimiento: soporte, moderacion, pagos locales y derechos de autor."
+      ],
+      "aporta": [
+        "El costo por reproduccion determina si cada minuto de escucha deja margen.",
+        "La escala de la CDN permite que el costo de entrega caiga a centavos por usuario.",
+        "El marketing de marca es mas barato que la adquisicion por busqueda de palabra clave."
+      ],
+      "riesgos": [
+        "Un aumento en las tarifas de los sellos presiona el margen de forma directa.",
+        "La estructura variable exige que el crecimiento de usuarios venga acompanado de ingreso."
+      ]
+    },
+    "revenue": {
+      "numero": 9,
+      "titulo": "Fuentes de Ingresos",
+      "corto": "Ingresos",
+      "subtitulo": "Suscripciones Premium recurrentes, publicidad del nivel gratuito y Spotify Audience Network",
+      "tag": "Ingreso principal: la suscripcion",
+      "descripcion": "El ingreso tiene dos naturalezas distintas y complementarias. La suscripcion Premium es recurrente, predecible y con mejor margen; la publicidad monetiza el trafico del nivel gratuito y financia el acceso de miles de millones de personas. Spotify Audience Network anade una tercera via al vender anuncios dentro del contenido de podcast.",
+      "elementos": [
+        "Suscripciones Premium: Individual, Duo, Familiar y Estudiante, con cobro mensual o anual.",
+        "Planes y promociones: periodos de prueba, planes familiares regionalizados y descuentos student verificados.",
+        "Publicidad en el nivel gratuito: spots de audio y display segmentados por contexto, pais, edad y dispositivo.",
+        "Spotify Audience Network: inventario publicitario dentro del reproductor de podcasts.",
+        "Ingresos por acuerdos: fabricantes que incluyen la prueba Premium o el servicio junto al dispositivo.",
+        "Otros ingresos: licencias de tecnologia, servicios para marcas y colaboraciones puntuales."
+      ],
+      "aporta": [
+        "La suscripcion aporta la mayor parte del ingreso y es la fuente mas predecible.",
+        "La publicidad convierte usuarios gratuitos en ingresos sin sumar al costo de suscripcion.",
+        "Audience Network monetiza un inventario que antes no generaba directo."
+      ],
+      "riesgos": [
+        "La dependencia de la suscripcion hace que cualquier caida de churn duela de inmediato.",
+        "La publicidad es ciclica: sigue al ciclo economico de los anunciantes."
+      ]
+    }
+  },
+  "tarjetas": [
+    {
+      "id": "freemium",
+      "numero": "A",
+      "titulo": "Como leer el diagrama",
+      "subtitulo": "Ficha ampliada, capitulos y exportaciones del visor",
+      "descripcion": "El lienzo es interactivo en dos niveles: la navegacion nativa del visor de Archify y una capa de detalle ampliada propia de esta practica. Ambas funcionan a la vez, sobre el mismo diagrama.",
+      "elementos": [
+        "Haz clic en cualquier recuadro del lienzo, en un chip del indice o en una de las dos tarjetas inferiores: se abre una ficha que ocupa casi toda la pantalla con el detalle completo del bloque.",
+        "La ficha incluye descripcion, elementos clave, que aporta, riesgos y las relaciones entrantes y salientes deducidas del propio lienzo.",
+        "T alterna el tema, S recorre los estilos visuales, F activa la presentacion y E abre la exportacion."
+      ],
+      "aporta": [
+        "Reduce la friccion de entrada: el usuario puede probar el servicio sin pagar.",
+        "Sostiene el volumen de reproducciones que exige la estructura de regalias."
+      ],
+      "riesgos": [
+        "La tasa de conversion entre gratuito y Premium es el indicador que sostiene todo el modelo."
+      ],
+      "corto": "Como leer"
+    },
+    {
+      "id": "lectura",
+      "numero": "B",
+      "titulo": "Ruta de estudio en tres capitulos",
+      "subtitulo": "Orden recomendado para recorrer el modelo",
+      "descripcion": "El visor incluye una barra de capitulos que reenfoca el lienzo por etapas. Es la ruta mas eficiente para estudiar y para explicar el modelo en clase.",
+      "elementos": [
+        "Construccion de la oferta: socios, actividades, recursos y propuesta de valor.",
+        "Entrega al cliente: propuesta de valor, relaciones, canales y segmentos.",
+        "Costos e ingresos: segmentos, fuentes de ingresos y estructura de costos."
+      ],
+      "aporta": [
+        "El recorrido por capitulos ordena el estudio: oferta, entrega al cliente y dinero.",
+        "La ficha ampliada convierte el diagrama en material de estudio, no solo en una imagen."
+      ],
+      "riesgos": [
+        "La ficha es una capa añadida: el HTML sigue siendo valido como artefacto Archify aunque se desactive."
+      ],
+      "corto": "Ruta"
+    }
+  ],
+  "glosario": [
+    {
+      "termino": "Churn",
+      "definicion": "Porcentaje de suscriptores que cancelan su plan en un periodo determinado. Es la metrica que mas directamente afecta el valor de la base de suscripciones."
+    },
+    {
+      "termino": "ARPU",
+      "definicion": "Ingreso medio por usuario. En Spotify se calcula sobre la base de suscriptores Premium y sirve para comparar el valor de cada plan."
+    },
+    {
+      "termino": "Regalias por reproduccion",
+      "definicion": "Pago que Spotify entrega a sellos y artistas cada vez que una pista se reproduce. Es el costo variable mas grande del modelo."
+    },
+    {
+      "termino": "Freemium",
+      "definicion": "Modelo en el que una capa gratuita financia la escala y una capa de pago captura el valor. En Spotify la capa gratuita lleva anuncios y la Premium los elimina."
+    },
+    {
+      "termino": "Audience Network",
+      "definicion": "Red publicitaria de Spotify que permite a los anunciantes colocar anuncios dentro del reproductor de podcasts."
+    }
+  ]
+}
