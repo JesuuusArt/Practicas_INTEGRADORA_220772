@@ -1,0 +1,344 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Secuencia de Pantallas Moviles con 2 Roles — Spotify UX Journey",
+    "quality_profile": "showcase",
+    "animation": "trace",
+    "viewBox": [
+      1310,
+      760
+    ],
+    "views": [
+      {
+        "id": "todos-los-flujos",
+        "label": "Flujo Completo (16 Pantallas)",
+        "focus": [
+          "scr-01", "scr-02", "scr-03", "scr-04",
+          "scr-05", "scr-06", "scr-07", "scr-08", "scr-09", "scr-10",
+          "scr-11", "scr-12", "scr-13", "scr-14", "scr-15", "scr-16"
+        ],
+        "note": "Ecosistema movil integral: onboarding compartido, flujo de reproduccion de oyente y flujo analitico de artista."
+      },
+      {
+        "id": "rol-oyente",
+        "label": "Rol 1: Usuario Oyente (Listener)",
+        "focus": [
+          "scr-01", "scr-02", "scr-03", "scr-04",
+          "scr-05", "scr-06", "scr-07", "scr-08", "scr-09", "scr-10"
+        ],
+        "note": "Ruta de experiencia del usuario oyente: descubrimiento, busqueda, reproduccion inmersiva Now Playing y biblioteca."
+      },
+      {
+        "id": "rol-creador",
+        "label": "Rol 2: Creador / Artista (Spotify for Artists)",
+        "focus": [
+          "scr-01", "scr-02", "scr-03", "scr-04",
+          "scr-11", "scr-12", "scr-13", "scr-14", "scr-15", "scr-16"
+        ],
+        "note": "Ruta de gestion para artistas: metricas de listeners en vivo, catalogo de lanzamientos, perfil oficial y Canvas."
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "scr-01",
+      "type": "external",
+      "label": "Splash Screen",
+      "sublabel": "SCR-01 · Bienvenida",
+      "tag": "Compartida",
+      "pos": [580, 40],
+      "size": [150, 60]
+    },
+    {
+      "id": "scr-02",
+      "type": "security",
+      "label": "Login y Registro",
+      "sublabel": "SCR-02 · SSO Apple/Google",
+      "tag": "Seguridad",
+      "pos": [580, 170],
+      "size": [150, 60]
+    },
+    {
+      "id": "scr-03",
+      "type": "backend",
+      "label": "Selector de Rol",
+      "sublabel": "SCR-03 · Hub de Modo",
+      "tag": "Gateway",
+      "pos": [580, 300],
+      "size": [150, 60]
+    },
+
+    {
+      "id": "scr-05",
+      "type": "frontend",
+      "label": "Home Feed",
+      "sublabel": "SCR-05 · Hecho para ti",
+      "tag": "Rol Oyente",
+      "pos": [330, 300],
+      "size": [150, 60]
+    },
+    {
+      "id": "scr-06",
+      "type": "frontend",
+      "label": "Explorar & Radar",
+      "sublabel": "SCR-06 · Busqueda & Generos",
+      "tag": "Rol Oyente",
+      "pos": [80, 300],
+      "size": [150, 60]
+    },
+    {
+      "id": "scr-07",
+      "type": "frontend",
+      "label": "Playlist & Album",
+      "sublabel": "SCR-07 · Tracks & Shuffle",
+      "tag": "Rol Oyente",
+      "pos": [80, 460],
+      "size": [150, 60]
+    },
+    {
+      "id": "scr-08",
+      "type": "frontend",
+      "label": "Now Playing",
+      "sublabel": "SCR-08 · Player & Lyrics",
+      "tag": "Rol Oyente",
+      "pos": [330, 460],
+      "size": [150, 60]
+    },
+    {
+      "id": "scr-09",
+      "type": "database",
+      "label": "Tu Biblioteca",
+      "sublabel": "SCR-09 · Liked Songs",
+      "tag": "Rol Oyente",
+      "pos": [80, 620],
+      "size": [150, 60]
+    },
+    {
+      "id": "scr-10",
+      "type": "messagebus",
+      "label": "DJ IA Interactivo",
+      "sublabel": "SCR-10 · Curaduria IA",
+      "tag": "Rol Oyente",
+      "pos": [330, 620],
+      "size": [150, 60]
+    },
+
+    {
+      "id": "scr-11",
+      "type": "frontend",
+      "label": "Live Dashboard",
+      "sublabel": "SCR-11 · Oyentes en vivo",
+      "tag": "Rol Creador",
+      "pos": [830, 300],
+      "size": [150, 60]
+    },
+    {
+      "id": "scr-12",
+      "type": "frontend",
+      "label": "Catalogo Musical",
+      "sublabel": "SCR-12 · Singles & EPs",
+      "tag": "Rol Creador",
+      "pos": [1080, 300],
+      "size": [150, 60]
+    },
+    {
+      "id": "scr-13",
+      "type": "database",
+      "label": "Metricas de Track",
+      "sublabel": "SCR-13 · Retencion global",
+      "tag": "Rol Creador",
+      "pos": [1080, 460],
+      "size": [150, 60]
+    },
+    {
+      "id": "scr-14",
+      "type": "frontend",
+      "label": "Perfil de Artista",
+      "sublabel": "SCR-14 · Bio & Artist Pick",
+      "tag": "Rol Creador",
+      "pos": [830, 460],
+      "size": [150, 60]
+    },
+    {
+      "id": "scr-15",
+      "type": "cloud",
+      "label": "Subida de Canvas",
+      "sublabel": "SCR-15 · Video 8s Loop",
+      "tag": "Rol Creador",
+      "pos": [1080, 620],
+      "size": [150, 60]
+    },
+    {
+      "id": "scr-16",
+      "type": "messagebus",
+      "label": "Hitos & Audiencia",
+      "sublabel": "SCR-16 · Notificaciones 1M",
+      "tag": "Rol Creador",
+      "pos": [830, 620],
+      "size": [150, 60]
+    },
+
+    {
+      "id": "scr-04",
+      "type": "security",
+      "label": "Ajustes Globales",
+      "sublabel": "SCR-04 · Audio HiFi",
+      "tag": "Compartida",
+      "pos": [580, 620],
+      "size": [150, 60]
+    }
+  ],
+  "connections": [
+    {
+      "id": "c-01-02",
+      "from": "scr-01",
+      "to": "scr-02",
+      "label": "Iniciar",
+      "variant": "emphasis",
+      "labelDy": 24
+    },
+    {
+      "id": "c-02-03",
+      "from": "scr-02",
+      "to": "scr-03",
+      "label": "Auth OK",
+      "variant": "emphasis",
+      "labelDy": 24
+    },
+    {
+      "id": "c-03-05",
+      "from": "scr-03",
+      "to": "scr-05",
+      "label": "Modo Oyente",
+      "variant": "emphasis"
+    },
+    {
+      "id": "c-03-11",
+      "from": "scr-03",
+      "to": "scr-11",
+      "label": "Modo Creador",
+      "variant": "security"
+    },
+
+    {
+      "id": "c-05-06",
+      "from": "scr-05",
+      "to": "scr-06",
+      "label": "Explorar"
+    },
+    {
+      "id": "c-06-07",
+      "from": "scr-06",
+      "to": "scr-07",
+      "label": "Playlist",
+      "variant": "emphasis",
+      "labelDy": 24
+    },
+    {
+      "id": "c-07-08",
+      "from": "scr-07",
+      "to": "scr-08",
+      "label": "Play Track",
+      "variant": "emphasis"
+    },
+    {
+      "id": "c-08-09",
+      "from": "scr-08",
+      "to": "scr-09",
+      "label": "Guardar",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "c-09-10",
+      "from": "scr-09",
+      "to": "scr-10",
+      "label": "DJ IA",
+      "variant": "emphasis"
+    },
+
+    {
+      "id": "c-11-12",
+      "from": "scr-11",
+      "to": "scr-12",
+      "label": "Catalogo",
+      "variant": "security"
+    },
+    {
+      "id": "c-12-13",
+      "from": "scr-12",
+      "to": "scr-13",
+      "label": "Metricas",
+      "variant": "security",
+      "labelDy": 24
+    },
+    {
+      "id": "c-13-14",
+      "from": "scr-13",
+      "to": "scr-14",
+      "label": "Perfil",
+      "variant": "security"
+    },
+    {
+      "id": "c-14-15",
+      "from": "scr-14",
+      "to": "scr-15",
+      "label": "Canvas 8s",
+      "variant": "security",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "c-15-16",
+      "from": "scr-15",
+      "to": "scr-16",
+      "label": "Hitos 1M",
+      "variant": "security"
+    },
+
+    {
+      "id": "c-10-04",
+      "from": "scr-10",
+      "to": "scr-04",
+      "label": "Ajustes",
+      "variant": "dashed"
+    },
+    {
+      "id": "c-16-04",
+      "from": "scr-16",
+      "to": "scr-04",
+      "label": "Cuenta",
+      "variant": "dashed"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "emerald",
+      "title": "Experiencia de Usuario Oyente (Listener)",
+      "items": [
+        "Navegación secuencial: Onboarding → Feed → Búsqueda → Now Playing → Biblioteca → DJ IA.",
+        "Now Playing (SCR-08): centro inmersivo con Canvas en bucle y letras sincronizadas.",
+        "Zona de pulgar (thumb-zone); reconocimiento antes que recuerdo."
+      ]
+    },
+    {
+      "dot": "cyan",
+      "title": "Experiencia de Artista / Creador (Creator)",
+      "items": [
+        "Monitoreo en tiempo real (Live Listeners) y rendimiento en playlists editoriales y de usuarios.",
+        "Engagement con Canvas visual de 8 s en bucle desde móvil.",
+        "Perfil oficial con Artist Pick, biografía verificada y notificaciones de hitos."
+      ]
+    },
+    {
+      "dot": "orange",
+      "title": "Infraestructura & Seguridad Compartida",
+      "items": [
+        "Autenticación federada OAuth 2.0/OIDC para cuentas gratuitas y Premium.",
+        "Selector de rol dinámico para cambiar entre oyente/creador sin relogin.",
+        "Calidad de reproducción (Normal/Alta/HiFi) y gestión de privacidad."
+      ]
+    }
+  ]
+}
