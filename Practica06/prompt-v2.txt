@@ -1,0 +1,69 @@
+================================================================================
+PRACTICA 06 - DIAGRAMA DE SECUENCIA DE PANTALLAS (SKETCHES) DE APLICACION MOVIL
+PROMPT v2 (ITERACION Y REFINAMIENTO DE ESTRUCTURA Y ROLES)
+================================================================================
+
+Plataforma elegida: Spotify Mobile Ecosystem (Spotify App & Spotify for Artists).
+Herramienta de generacion: Archify.
+
+--------------------------------------------------------------------------------
+REVISION CRITICA DEL RESULTADO OBTENIDO EN v1
+--------------------------------------------------------------------------------
+1. El prompt v1 carece de una especificacion formal del catalogo de pantallas:
+   se requiere una numeracion estricta (SCR-01 a SCR-16) con nombres precisos
+   de componentes.
+2. Los 2 roles deben tener una separacion espacial clara mediante carriles (lanes)
+   o swimlanes dentro del flujo de la aplicacion movil:
+   - Carril de Acceso y Configuracion Compartida (Shared Experience)
+   - Carril de Experiencia de Usuario Oyente (Listener User Journey)
+   - Carril de Experiencia de Artista/Creador (Creator Management Journey)
+3. Es necesario definir fases temporales del ciclo de vida del usuario (Phases):
+   - Fase 01: Onboarding y Acceso (Onboarding & Auth)
+   - Fase 02: Navegacion Principal y Exploracion (Discovery & Navigation)
+   - Fase 03: Interaccion Clave (Playback para Oyente / Metricas para Artista)
+   - Fase 04: Retencion y Creacion (Biblioteca & DJ IA / Editor de Perfil & Canvas)
+4. Las conexiones entre pantallas deben especificar la naturaleza del evento:
+   - Tap de boton / Touch gesture
+   - Swipe horizontal o vertical
+   - Transicion modal / push navigation
+   - Respuesta asincrona de la API de Spotify (Auth token, Audio stream, Metrics fetch)
+
+--------------------------------------------------------------------------------
+PROMPT v2 - ESPECIFICACION REFINADA PARA ARCHIFY
+--------------------------------------------------------------------------------
+
+Genera una especificacion de arquitectura de flujo y secuencia de pantallas
+(diagram_type `workflow` o `sequence`) para el ecosistema movil de Spotify.
+
+ESTRUCTURA DE CARRILES (LANES):
+- Lane 1: "shared" -> "Acceso Compartido & Sistema" (Pantallas comunes de inicio, auth y switch de modo).
+- Lane 2: "listener" -> "Experiencia Oyente (Spotify App)" (Flujo de descubrimiento, navegacion, reproduccion y biblioteca).
+- Lane 3: "creator" -> "Experiencia Creador (Spotify for Artists)" (Flujo de analitica en vivo, catalogo, perfil y publicacion de Canvas).
+
+CATALOGO DE 16 PANTALLAS CONCRETAS:
+Compartidas:
+- SCR-01: Splash & Bienvenida (Identidad de marca y boton de arranque)
+- SCR-02: Login / Registro Unificado (SSO, email y validacion de credenciales)
+- SCR-03: Selector de Rol / Hub de Modo (Bifurcacion: Oyente vs Artista/Creador)
+- SCR-04: Ajustes Globales de Cuenta y Audio (Calidad de streaming, descargas y privacidad)
+
+Rol Oyente (Listener):
+- SCR-05: Home Feed Personalizado (Hecho para ti, carruseles, daily mixes)
+- SCR-06: Explorar y Buscador por Generos (Categorias, radar de novedades, busqueda por voz)
+- SCR-07: Detalle de Playlist / Album (Header con cover, shuffle verde, lista de pistas)
+- SCR-08: Reproductor en Pantalla Completa (Now Playing con canvas, scrubber, lyrics y connect)
+- SCR-09: Tu Biblioteca (Playlists guardadas, canciones con like, filtros de artistas)
+- SCR-10: Experiencia DJ IA / Descubrimiento Semanal (Onda sonora IA, voz sintetica y recomendaciones)
+
+Rol Creador (Artist / Podcaster):
+- SCR-11: Dashboard de Estadisticas en Vivo (Listeners activos ahora, streams diarios, ranking)
+- SCR-12: Catalogo de Discografia y Lanzamientos (Singles, EPs, albums y estado en playlists)
+- SCR-13: Detalle y Metricas de Lanzamiento (Retencion de escucha, demografia geografica y playlists)
+- SCR-14: Editor de Perfil de Artista (Header, bio oficial, enlaces y Artist Pick)
+- SCR-15: Subida y Preview de Canvas Visual (Loop de video vertical de 8s para canciones)
+- SCR-16: Hitos, Audiencia e Insights (Notificaciones de 1M streams, Marquee tools)
+
+CONFIGURACION DE VISTAS (VIEWS):
+- Vista general: "all-screens" (Ruta completa de ambas experiencias).
+- Vista Oyente: "listener-flow" (Foco en SCR-01, 02, 03, 05, 06, 07, 08, 09, 10).
+- Vista Creador: "creator-flow" (Foco en SCR-01, 02, 03, 11, 12, 13, 14, 15, 16).
