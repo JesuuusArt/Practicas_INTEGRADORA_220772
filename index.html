@@ -109,7 +109,7 @@
           <div class="select-card active" data-practice="p6" onclick="showPractice('p6')">
             <span class="num">PRÁCTICA 06</span>
             <h3>Diagrama de Secuencia de Pantallas Móviles con 2 Roles</h3>
-            <p>16 pantallas con sketches vectoriales para Oyente y Creador en Spotify, con simulador interactivo en Archify.</p>
+            <p>16 pantallas con sketches ilustrados para Oyente y Creador en Spotify; al hacer clic en un recuadro del diagrama se abre una ventana con la imagen de su sketch.</p>
             <span class="badge" style="background:rgba(29,185,84,0.18); color:#1db954;">🟢 Concluida (20 Firmas)</span>
           </div>
           <div class="select-card" data-practice="p3" onclick="showPractice('p3')">
@@ -130,13 +130,20 @@
       <!-- PRÁCTICA 06 -->
       <section id="p6" class="practice active">
         <div class="panel"><h3>📱 Práctica 06 — Diagrama de Secuencia de Pantallas (Sketches) de Aplicación Móvil con 2 Roles</h3>
-          <p>En base a la plataforma elegida para el modelo CANVAS (<strong>Spotify</strong>), se diseñó el diagrama de secuencia de pantallas y flujo de experiencia de usuario (UX Screen Flow / Wireflow) orientado a aplicación móvil, considerando <strong>2 roles</strong> (<strong>Rol 1: Usuario Oyente</strong> y <strong>Rol 2: Creador / Artista en Spotify for Artists</strong>) y un total de <strong>16 pantallas completas</strong> con sketches vectoriales interactivos, simulador móvil y validación en <strong>Archify</strong> (calidad showcase, 0 errores).</p>
+          <p>En base a la plataforma elegida para el modelo CANVAS (<strong>Spotify</strong>), se diseñó el diagrama de secuencia de pantallas y flujo de experiencia de usuario (UX Screen Flow / Wireflow) orientado a aplicación móvil, considerando <strong>2 roles</strong> (<strong>Rol 1: Usuario Oyente</strong> y <strong>Rol 2: Creador / Artista en Spotify for Artists</strong>) y un total de <strong>16 pantallas completas</strong>. El diagrama se generó con <strong>Archify</strong> (calidad showcase, 0 errores) y cuenta con una capa interactiva: <strong>al hacer clic en cualquier recuadro se abre una ventana con la imagen de su sketch</strong>.</p>
         </div>
         <div class="panel"><h3>🎯 Objetivos</h3>
-          <p>Modelar el flujo completo de la experiencia móvil, identificar pantallas compartidas y específicas por rol, alimentar al agente de Archify mediante prompts iterados (.txt) y generar un diagrama navegable con sketches de alta fidelidad, simulador paso a paso y fichas técnicas con heurísticas de usabilidad y endpoints de la API de Spotify.</p>
+          <p>Modelar el flujo completo de la experiencia móvil, identificar pantallas compartidas y específicas por rol, alimentar a Archify mediante prompts iterados (.txt) y generar un diagrama navegable en el que cada pantalla muestra su sketch ilustrado al hacer clic. Además, se incluyen fichas técnicas con objetivo UX, disparador y endpoint de la API de Spotify.</p>
         </div>
         <div class="panel"><h3>🗺️ Diagrama y Sketches Interactivos</h3>
           <iframe class="diagram" src="Practica06/spotify-screens.html" title="Secuencia de Pantallas Móviles de Spotify"></iframe>
+        </div>
+        <div class="panel"><h3>🖱️ Interacción: clic en un recuadro → ventana con el sketch</h3>
+          <p>Al hacer clic en cualquier nodo del diagrama se abre una ventana modal con la imagen del sketch correspondiente (16 sketches en total). Ejemplos capturados:</p>
+          <div class="evidence-grid">
+            <img src="Practica06/docs/zoom-modal-scr-08.png" alt="Modal del sketch SCR-08 · Now Playing" />
+            <img src="Practica06/docs/zoom-modal-scr-12.png" alt="Modal del sketch SCR-12 · Catálogo Musical" />
+          </div>
         </div>
         <div class="panel"><h3>🧰 Tecnologías usadas</h3>
           <div class="tech-list">
@@ -156,7 +163,7 @@
           <pre id="code-p6">Selecciona un archivo…</pre>
         </div>
         <div class="panel"><h3>📌 Conclusiones</h3>
-          <p>La Práctica 06 consolidó el diseño centrado en el usuario (UCD) para ecosistemas móviles multi-rol. La integración entre Archify para el modelado formal de flujos y una capa interactiva de sketches vectoriales permitió simular el recorrido completo tanto del oyente como del creador, logrando una entrega con estándar profesional y máxima calificación.</p>
+          <p>La Práctica 06 consolidó el diseño centrado en el usuario (UCD) para ecosistemas móviles multi-rol. Archify permitió el modelado formal del flujo completo de 16 pantallas y una capa interactiva añade la visualización del sketch de cada pantalla al hacer clic en su recuadro, cubriendo el recorrido tanto del oyente como del creador con un estándar profesional.</p>
         </div>
       </section>
 
