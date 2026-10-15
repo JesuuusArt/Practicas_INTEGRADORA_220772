@@ -1,4 +1,4 @@
-# Práctica 06: Diagrama de Secuencia de Pantallas (Sketches) de Aplicación Móvil con 2 Roles
+# [Práctica 06: Diagrama de Secuencia de Pantallas (Sketches) de Aplicación Móvil con 2 Roles](https://jesuuusart.github.io/Practicas_INTEGRADORA_220772/Practica06/)
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Ver%20Diagrama_Interactivo-1DB954?style=for-the-badge&logo=spotify&logoColor=white)](https://jesuuusart.github.io/Practicas_INTEGRADORA_220772/Practica06/)
 [![Ponderación](https://img.shields.io/badge/Ponderación-20%20Firmas-38bdf8?style=for-the-badge)](https://jesuuusart.github.io/Practicas_INTEGRADORA_220772/)
