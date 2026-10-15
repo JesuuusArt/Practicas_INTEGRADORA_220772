@@ -106,23 +106,62 @@
       <section class="section">
         <h2>📋 Selecciona una práctica</h2>
         <div class="cards-select">
-          <div class="select-card" data-practice="p2" onclick="showPractice('p2')">
-            <span class="num">PRÁCTICA 02</span>
-            <h3>Boceto de Arquitectura de Proyecto Integrador</h3>
-            <p>Diagrama interactivo en HTML de la arquitectura del Proyecto Integrador generado con Archify.</p>
-            <span class="badge">🟢 Concluida</span>
+          <div class="select-card active" data-practice="p6" onclick="showPractice('p6')">
+            <span class="num">PRÁCTICA 06</span>
+            <h3>Diagrama de Secuencia de Pantallas Móviles con 2 Roles</h3>
+            <p>16 pantallas con sketches vectoriales para Oyente y Creador en Spotify, con simulador interactivo en Archify.</p>
+            <span class="badge" style="background:rgba(29,185,84,0.18); color:#1db954;">🟢 Concluida (20 Firmas)</span>
           </div>
           <div class="select-card" data-practice="p3" onclick="showPractice('p3')">
             <span class="num">PRÁCTICA 03</span>
             <h3>Boceto de Modelo Canvas con Archify</h3>
             <p>Business Model Canvas interactivo de Spotify, mediante prompt iterado y validado con Archify.</p>
-            <span class="badge">🟢 Concluida</span>
+            <span class="badge">🟢 Concluida (10 Firmas)</span>
+          </div>
+          <div class="select-card" data-practice="p2" onclick="showPractice('p2')">
+            <span class="num">PRÁCTICA 02</span>
+            <h3>Boceto de Arquitectura de Proyecto Integrador</h3>
+            <p>Diagrama interactivo en HTML de la arquitectura del Proyecto Integrador generado con Archify.</p>
+            <span class="badge">🟢 Concluida (24 Firmas)</span>
           </div>
         </div>
       </section>
 
+      <!-- PRÁCTICA 06 -->
+      <section id="p6" class="practice active">
+        <div class="panel"><h3>📱 Práctica 06 — Diagrama de Secuencia de Pantallas (Sketches) de Aplicación Móvil con 2 Roles</h3>
+          <p>En base a la plataforma elegida para el modelo CANVAS (<strong>Spotify</strong>), se diseñó el diagrama de secuencia de pantallas y flujo de experiencia de usuario (UX Screen Flow / Wireflow) orientado a aplicación móvil, considerando <strong>2 roles</strong> (<strong>Rol 1: Usuario Oyente</strong> y <strong>Rol 2: Creador / Artista en Spotify for Artists</strong>) y un total de <strong>16 pantallas completas</strong> con sketches vectoriales interactivos, simulador móvil y validación en <strong>Archify</strong> (calidad showcase, 0 errores).</p>
+        </div>
+        <div class="panel"><h3>🎯 Objetivos</h3>
+          <p>Modelar el flujo completo de la experiencia móvil, identificar pantallas compartidas y específicas por rol, alimentar al agente de Archify mediante prompts iterados (.txt) y generar un diagrama navegable con sketches de alta fidelidad, simulador paso a paso y fichas técnicas con heurísticas de usabilidad y endpoints de la API de Spotify.</p>
+        </div>
+        <div class="panel"><h3>🗺️ Diagrama y Sketches Interactivos</h3>
+          <iframe class="diagram" src="Practica06/spotify-screens.html" title="Secuencia de Pantallas Móviles de Spotify"></iframe>
+        </div>
+        <div class="panel"><h3>🧰 Tecnologías usadas</h3>
+          <div class="tech-list">
+            <span class="tech">Archify 2.17</span><span class="tech">Node.js</span><span class="tech">HTML5</span><span class="tech">CSS3 Vanilla</span><span class="tech">JavaScript ES6</span><span class="tech">SVG Vectorial</span><span class="tech">JSON</span><span class="tech">GitHub Pages</span>
+          </div>
+        </div>
+        <div class="panel"><h3>🖼️ Evidencias Visuales de Validación</h3>
+          <div class="evidence-grid">
+            <img src="Practica06/docs/spotify-screens.visual-check.1440x900.dark.png" alt="Archify 1440x900 oscuro" />
+            <img src="Practica06/docs/spotify-screens.visual-check.1440x900.light.png" alt="Archify 1440x900 claro" />
+            <img src="Practica06/docs/spotify-screens.visual-check.2048x1320.dark.png" alt="Archify 2048x1320 oscuro" />
+            <img src="Practica06/docs/spotify-screens.visual-check.2048x1320.light.png" alt="Archify 2048x1320 claro" />
+          </div>
+        </div>
+        <div class="panel"><h3>📁 Visor de código</h3>
+          <div class="code-tabs" id="tabs-p6"></div>
+          <pre id="code-p6">Selecciona un archivo…</pre>
+        </div>
+        <div class="panel"><h3>📌 Conclusiones</h3>
+          <p>La Práctica 06 consolidó el diseño centrado en el usuario (UCD) para ecosistemas móviles multi-rol. La integración entre Archify para el modelado formal de flujos y una capa interactiva de sketches vectoriales permitió simular el recorrido completo tanto del oyente como del creador, logrando una entrega con estándar profesional y máxima calificación.</p>
+        </div>
+      </section>
+
       <!-- PRÁCTICA 03 -->
-      <section id="p3" class="practice active">
+      <section id="p3" class="practice">
         <div class="panel"><h3>🎵 Práctica 03 — Boceto de Modelo Canvas con Archify</h3>
           <p>En esta práctica se utilizó el agente de modelado arquitectónico Archify para generar un <strong>Business Model Canvas</strong> interactivo y autónomo en formato HTML para <strong>Spotify</strong>, servicio multiplataforma de streaming musical y de podcasts. El resultado cubre los 9 bloques del canvas, con paleta propia de Spotify y ficha ampliada al hacer clic en cada bloque.</p>
         </div>
@@ -209,9 +248,18 @@
         document.getElementById(id).classList.add('active');
         document.querySelectorAll('.select-card').forEach(c => c.classList.toggle('active', c.dataset.practice === id));
       }
-      document.querySelector('.select-card[data-practice="p3"]').classList.add('active');
+      document.querySelector('.select-card[data-practice="p6"]').classList.add('active');
 
       const codeFiles = {
+        p6: [
+          ['spotify-screens.json', 'Practica06/spotify-screens.json'],
+          ['prompt-v3.txt', 'Practica06/prompt-v3.txt'],
+          ['prompt-v2.txt', 'Practica06/prompt-v2.txt'],
+          ['prompt-v1.txt', 'Practica06/prompt-v1.txt'],
+          ['build-screens.mjs', 'Practica06/tools/build-screens.mjs'],
+          ['screens-layer.css', 'Practica06/tools/screens-layer.css'],
+          ['screens-layer.js', 'Practica06/tools/screens-layer.js'],
+        ],
         p3: [
           ['spotify-canvas.json', 'Practica03/spotify-canvas.json'],
           ['prompt-v3.txt', 'Practica03/prompt-v3.txt'],
@@ -224,7 +272,7 @@
           ['README.md', 'Practica02/README.md'],
         ],
       };
-      for (const key of ['p3', 'p2']) {
+      for (const key of ['p6', 'p3', 'p2']) {
         const tabs = document.getElementById('tabs-' + key);
         codeFiles[key].forEach(([label, path], i) => {
           const b = document.createElement('button');
