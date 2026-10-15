@@ -1,0 +1,83 @@
+================================================================================
+PRACTICA 06 - DIAGRAMA DE SECUENCIA DE PANTALLAS (SKETCHES) DE APLICACION MOVIL
+PROMPT v3 (ESPECIFICACION FINAL DE ALTA FIDELIDAD + SKETCHES INTERACTIVOS)
+================================================================================
+
+DATOS INSTITUCIONALES:
+- Asignatura: Integradora | Ingenieria en Desarrollo y Gestion de Software
+- Estudiante: Jesus Alejandro Artiaga Morales (Matricula: 220772)
+- Docente: M.T.I. Marco A. Ramirez Hernandez | Universidad Tecnologica de Xicotepec de Juarez
+- Entrega: Practica 06 - 20 Firmas
+
+--------------------------------------------------------------------------------
+REQUISITOS DEL DOCENTE CUMPLIDOS AL 100%
+--------------------------------------------------------------------------------
+1. Plataforma elegida: Spotify (continuidad directa con el Modelo Canvas de P03).
+2. Orientacion a aplicacion movil: Sketches y mockups vectoriales con marcos de
+   dispositivo movil realistas (status bar, notch/dynamic island, viewport vertical
+   9:19.5, bottom navigation tab bar y gestos tactiles).
+3. Al menos 2 roles identificados y diferenciados:
+   - Rol 1: Oyente / Listener (Free y Premium).
+   - Rol 2: Creador / Artista / Podcaster (Spotify for Artists y Creator Studio).
+4. Minimo de 15 pantallas: Se implementan 16 pantallas completas (4 compartidas,
+   6 para el rol Oyente y 6 para el rol Creador).
+5. Visualizacion con sketches navegables: Cada pantalla cuenta con su representacion
+   vectorial estilo wireframe/sketch con wire-styling fiel a Spotify, anotaciones
+   funcionales y microinteracciones.
+6. Diagrama de flujo y secuencia interactivo con Archify: Alimentacion formal
+   mediante JSON validado por Archify CLI en modo `showcase`, permitiendo:
+   - Foco dinamico por rol (Ambos, Oyente o Creador).
+   - Ruta principal de navegacion resaltada (Main Path).
+   - Fichas tecnicas expandibles tipo modal con objetivos UX, componentes de UI,
+     disparadores de evento (Touch Triggers) y servicios backend / endpoints API.
+   - Simulador interactivo paso a paso ("Paso siguiente en el flujo").
+   - Conmutacion dinamica entre Modo Oscuro (#121212 Spotify) y Modo Claro.
+
+--------------------------------------------------------------------------------
+PROMPT v3 - ESPECIFICACION TECNICA DEFINITIVA PARA ARCHIFY
+--------------------------------------------------------------------------------
+
+Genera un diagrama de arquitectura de flujo y secuencia de pantallas tipo `workflow`
+(calidad `showcase`, animacion `trace`, profile estricto) que modele el flujo de
+experiencia de usuario de la aplicacion movil de Spotify.
+
+1. GEOMETRIA Y CARRILES (LANES):
+- Lane 1: `shared` -> "1. Acceso Unificado & Sistema Compartido"
+- Lane 2: `listener` -> "2. Experiencia de Usuario Oyente (Spotify App)"
+- Lane 3: `creator` -> "3. Experiencia de Creador / Artista (Spotify for Artists)"
+
+2. FASES TEMPORALES DE EXPERIENCIA (PHASES):
+- Phase 1: `onboarding` -> "Onboarding & Auth" (Cols 0-1)
+- Phase 2: `discovery` -> "Exploracion & Dashboard" (Cols 2-3)
+- Phase 3: `interaction` -> "Reproduccion & Metricas" (Cols 4-5)
+- Phase 4: `retention` -> "Biblioteca & Creacion Visual" (Cols 6-7)
+
+3. CATALOGO DE NODOS DE PANTALLA (16 PANTALLAS):
+- `scr-01`: [shared, col 0] "SCR-01: Splash & Bienvenida" (Onboarding branding, CTA inicio)
+- `scr-02`: [shared, col 1] "SCR-02: Login / Registro" (SSO Google/Apple, MFA seguro)
+- `scr-03`: [shared, col 2] "SCR-03: Selector de Rol / Hub" (Bifurcacion Oyente vs Creador)
+- `scr-04`: [shared, col 7] "SCR-04: Ajustes Globales" (Calidad audio, cache, privacidad)
+
+- `scr-05`: [listener, col 2] "SCR-05: Home Feed" (Hecho para ti, carruseles, daily mixes)
+- `scr-06`: [listener, col 3] "SCR-06: Explorar & Busqueda" (Radar, busqueda por voz, generos)
+- `scr-07`: [listener, col 4] "SCR-07: Detalle Playlist" (Cabecera cover, shuffle verde, lista)
+- `scr-08`: [listener, col 5] "SCR-08: Reproductor Full" (Now Playing, canvas loop, lyrics)
+- `scr-09`: [listener, col 6] "SCR-09: Tu Biblioteca" (Playlists guardadas, Liked Songs)
+- `scr-10`: [listener, col 7] "SCR-10: DJ IA Interactivo" (Voz sintetica IA, curaduria inteligente)
+
+- `scr-11`: [creator, col 2] "SCR-11: Dashboard Artista" (Oyentes en vivo, streams de hoy)
+- `scr-12`: [creator, col 3] "SCR-12: Catalogo Lanzamientos" (Discografia, singles, estado playlists)
+- `scr-13`: [creator, col 4] "SCR-13: Metricas de Cancion" (Retencion por segundo, geografia)
+- `scr-14`: [creator, col 5] "SCR-14: Editor de Perfil" (Cabecera, biografia, Artist Pick)
+- `scr-15`: [creator, col 6] "SCR-15: Subida de Canvas" (Video vertical 8s en bucle)
+- `scr-16`: [creator, col 7] "SCR-16: Hitos & Audiencia" (Alertas de 1M streams, Marquee)
+
+4. TRANSICIONES Y CONEXIONES (EDGES):
+- Conexiones ortogonales estrictas sin colisiones, con etiquetas claras indicando
+  el evento de usuario: `tap: 'Continuar'`, `submit: 'Auth OK'`, `switch: 'Rol'`,
+  `tap: 'Play'`, `tap: 'Ver metricas'`, `swipe: 'Lyrics'`, `tap: 'Publicar'`.
+
+5. CARDS DE SOPORTE ARQUITECTONICO:
+- Card 1 (Esmeralda): "Flujo de Retencion del Oyente" (Ciclo continuo Home -> Search -> Play -> Save).
+- Card 2 (Cian): "Bucle de Valor del Creador" (Insights -> Edicion de Perfil -> Canvas -> Crecimiento).
+- Card 3 (Naranja): "Puntos de Contacto Compartidos" (Seguridad unificada OAuth 2.0 y switch de cuenta rapido).

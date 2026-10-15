@@ -1,0 +1,46 @@
+================================================================================
+PRACTICA 06 - DIAGRAMA DE SECUENCIA DE PANTALLAS (SKETCHES) DE APLICACION MOVIL
+PROMPT v1 (SOLICITUD INICIAL AL AGENTE ARCHIFY)
+================================================================================
+
+DATOS GENERALES:
+- Asignatura: Integradora
+- Estudiante: Jesus Alejandro Artiaga Morales (Matricula: 220772)
+- Docente: M.T.I. Marco A. Ramirez Hernandez
+- Periodo: Septiembre - Diciembre 2026
+- Ponderacion: 20 Firmas
+- Modalidad: Individual
+- Plataforma seleccionada (base Canvas P03): Spotify (App Movil Multiplataforma)
+
+--------------------------------------------------------------------------------
+OBJETIVO GENERAL DE LA PRACTICA
+--------------------------------------------------------------------------------
+Disenar y modelar un diagrama interactivo de secuencia de pantallas (flujo de
+experiencia de usuario / UX Journey) orientado a la aplicacion movil de Spotify,
+contemplando al menos 2 roles de usuario en la plataforma y al menos 15 pantallas
+(entre pantallas compartidas y especificas de cada rol). El diagrama debe
+alimentar al agente de modelado Archify para generar una representacion visual
+interactiva con sketches/wireframes de pantallas moviles, flujos de navegacion,
+disparadores de eventos y arquitectura de experiencia de usuario.
+
+--------------------------------------------------------------------------------
+SOLICITUD INICIAL PARA ARCHIFY (PROMPT v1)
+--------------------------------------------------------------------------------
+
+Hola Archify, genera un diagrama de flujo y secuencia de pantallas para la
+aplicacion movil de Spotify.
+
+Requisitos basicos:
+1. Basate en el modelo CANVAS de Spotify previamente desarrollado.
+2. Considera 2 roles de usuario:
+   - Rol 1: Oyente / Listener (usuario comun que busca y reproduce musica/podcasts).
+   - Rol 2: Creador / Artista (usuario que gestiona su contenido en Spotify for Artists).
+3. Incluye al menos 15 pantallas moviles:
+   - Pantallas compartidas: Bienvenida, Login, Configuracion.
+   - Pantallas de Oyente: Home, Busqueda, Playlist, Reproductor, Biblioteca, DJ IA.
+   - Pantallas de Creador: Metricas en vivo, Catalogo, Detalle de cancion, Perfil de artista, Subida de Canvas, Hitos.
+4. Muestra como se pasa de una pantalla a otra con flechas y acciones del usuario
+   (taps, swipes, autenticacion).
+5. Usa los colores caracteristicos de Spotify (#1DB954 verde, fondo oscuro).
+
+Por favor valida la sintaxis y genera el archivo interactivo.

@@ -24,6 +24,9 @@
 | 1 | [Metodología de Evaluación de la Materia](./) | Transcribir en la libreta y comprender la metodología y las fechas de evaluación de la asignatura. | 5 firmas | 🟢 Concluida | — |
 | 2 | [Boceto de Arquitectura de Proyecto Integrador con Archify](./Practica02/) | Generación de un diagrama interactivo en HTML de la arquitectura del Proyecto Integrador utilizando la herramienta Archify. | 24 firmas | 🟢 Concluida | [Ver Diagrama Interactivo de Arquitectura en GitHub Pages](https://jesuuusart.github.io/Practicas_INTEGRADORA_220772/Practica02/) |
 | 3 | [Boceto de Modelo Canvas con Archify](./Practica03/) | Generación de un Business Model Canvas interactivo en HTML para una herramienta multiplataforma (Spotify), mediante un prompt iterado y validado con Archify. | 10 firmas | 🟢 Concluida | [Ver Modelo Canvas en GitHub Pages](https://jesuuusart.github.io/Practicas_INTEGRADORA_220772/Practica03/) |
+| 4 | Business Model Canvas Interactivo del Proyecto Integrador con Archify | (En equipo) Business Model Canvas interactivo del Proyecto Integrador generado con Archify, entregado en un repositorio de equipo. | 20 firmas | 🟢 Concluida | — |
+| 5 | Diagrama de Roles de Usuario con Descripción y 5 Funcionalidades | (En equipo) Diseño del diagrama de roles de usuario con descripción y sus 5 principales funcionalidades (features) de la plataforma. | 15 firmas | 🟢 Concluida | — |
+| 6 | [Diagrama de Secuencia de Pantallas (Sketches) de Aplicación Móvil con 2 Roles](./Practica06/) | Modelado de 16 pantallas con sketches ilustrados para 2 roles (Oyente y Creador) en Spotify; al hacer clic en cada recuadro del diagrama se abre una ventana con la imagen de su sketch, con validación showcase en Archify. | 20 firmas | 🟢 Concluida | [Ver Secuencia de Pantallas en GitHub Pages](https://jesuuusart.github.io/Practicas_INTEGRADORA_220772/Practica06/) |
 
 ---
 
@@ -42,6 +45,14 @@ cd Practicas_INTEGRADORA_220772
 ---
 
 ## 📂 Proyectos y Diagramas de Arquitectura
+
+<details>
+<summary>📱 Práctica 06 — Secuencia de Pantallas Móviles con 2 Roles (Spotify) (Haz clic para desplegar)</summary>
+
+- 📱 [Diagrama interactivo y Sketches Móviles](https://jesuuusart.github.io/Practicas_INTEGRADORA_220772/Practica06/spotify-screens.html)
+- 🌗 Previsualización: modo oscuro: [PNG](https://jesuuusart.github.io/Practicas_INTEGRADORA_220772/Practica06/docs/spotify-screens.visual-check.1440x900.dark.png) | modo claro: [PNG](https://jesuuusart.github.io/Practicas_INTEGRADORA_220772/Practica06/docs/spotify-screens.visual-check.1440x900.light.png)
+
+</details>
 
 <details>
 <summary>🧩 Práctica 02 — Arquitectura del Proyecto Integrador (Haz clic para desplegar)</summary>

@@ -1,0 +1,13 @@
+﻿# --- Intermedios de compilacion de Archify (regenerables con tools/build-screens.mjs) ---
+/spotify-screens.base.html
+/spotify-screens.visual-check.*
+/spotify-screens.deliver.visual-check.*
+
+# --- Caches / artefactos ---
+__pycache__/
+*.pyc
+node_modules/
+.build/
+
+# --- Opcional: originales full-res (~40 MB) ---
+# sketches/originales/

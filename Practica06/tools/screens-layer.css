@@ -1,0 +1,236 @@
+/* ============================================================================
+   Práctica 06 — Capa interactiva: clic en un nodo del diagrama de Archify
+   abre un modal con la IMAGEN del sketch de esa pantalla (sketches/sketchN.jpg)
+   Estudiante: Jesus Alejandro Artiaga Morales (220772) · UTXJ
+   ========================================================================== */
+
+:root {
+  --sp-green: #1db954;
+  --sp-green-dark: #158a3f;
+  --sp-blue: #38bdf8;
+  --sp-amber: #f59e0b;
+  --sp-bg: #121212;
+  --sp-panel: #181818;
+  --sp-border: rgba(255, 255, 255, 0.12);
+  --sp-muted: #a7a7a7;
+}
+
+/* ---------- Aviso flotante (invita a hacer clic) ---------- */
+.sp-sketch-hint {
+  position: fixed;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  z-index: 2147482000;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 16px;
+  border-radius: 999px;
+  background: rgba(18, 18, 18, 0.92);
+  color: #fff;
+  font: 600 12.5px/1.2 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  border: 1px solid rgba(29, 185, 84, 0.55);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.sp-sketch-hint[data-hide="true"] {
+  opacity: 0;
+  transform: translateX(-50%) translateY(10px);
+}
+.sp-sketch-hint .sp-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--sp-green);
+  box-shadow: 0 0 0 0 rgba(29, 185, 84, 0.7);
+  animation: sp-pulse 1.8s infinite;
+}
+@keyframes sp-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(29, 185, 84, 0.65); }
+  70% { box-shadow: 0 0 0 10px rgba(29, 185, 84, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(29, 185, 84, 0); }
+}
+
+/* ---------- Resalte de nodos con sketch ---------- */
+svg [data-node-id] {
+  cursor: pointer;
+}
+svg [data-node-id].sp-has-sketch:hover {
+  filter: drop-shadow(0 0 8px var(--sp-green));
+}
+
+/* ---------- Modal ---------- */
+.sp-sketch-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 26px;
+  font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+.sp-sketch-modal[hidden] {
+  display: none;
+}
+
+.sp-sketch-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.82);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  animation: sp-fade 0.18s ease both;
+}
+@keyframes sp-fade { from { opacity: 0; } to { opacity: 1; } }
+
+.sp-sketch-card {
+  position: relative;
+  z-index: 1;
+  width: min(1080px, 95vw);
+  max-height: 93vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #1a1a1a 0%, var(--sp-bg) 100%);
+  border: 1px solid var(--sp-border);
+  border-radius: 18px;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.65);
+  overflow: hidden;
+  animation: sp-pop 0.22s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes sp-pop {
+  from { opacity: 0; transform: translateY(14px) scale(0.985); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.sp-sketch-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+}
+.sp-sketch-code {
+  flex: 0 0 auto;
+  padding: 5px 10px;
+  border-radius: 8px;
+  background: rgba(29, 185, 84, 0.16);
+  color: var(--sp-green);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+.sp-sketch-titles { min-width: 0; flex: 1 1 auto; }
+.sp-sketch-titles h2 {
+  margin: 0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.sp-sketch-titles p {
+  margin: 2px 0 0;
+  color: var(--sp-muted);
+  font-size: 11.5px;
+}
+.sp-role-chip {
+  flex: 0 0 auto;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 10.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: rgba(29, 185, 84, 0.16);
+  color: var(--sp-green);
+}
+.sp-role-chip[data-role="oyente"] { background: rgba(29, 185, 84, 0.16); color: var(--sp-green); }
+.sp-role-chip[data-role="creador"] { background: rgba(56, 189, 248, 0.18); color: var(--sp-blue); }
+.sp-role-chip[data-role="compartida"] { background: rgba(245, 158, 11, 0.18); color: var(--sp-amber); }
+
+.sp-sketch-close {
+  flex: 0 0 auto;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--sp-border);
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+.sp-sketch-close:hover { background: rgba(255, 255, 255, 0.12); transform: rotate(90deg); }
+
+.sp-sketch-body {
+  padding: 16px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.sp-sketch-figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.sp-sketch-figure img {
+  width: 100%;
+  max-height: 62vh;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #0b0b0b;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.sp-sketch-figure figcaption {
+  color: var(--sp-muted);
+  font-size: 11px;
+}
+.sp-sketch-figure img.sp-loading { opacity: 0.35; }
+
+.sp-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.sp-meta {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+.sp-meta h4 {
+  margin: 0 0 5px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--sp-green);
+}
+.sp-meta p {
+  margin: 0;
+  color: #e6e6e6;
+  font-size: 12px;
+  line-height: 1.45;
+}
+.sp-meta code {
+  color: var(--sp-blue);
+  font-size: 11.5px;
+  word-break: break-word;
+}
+
+@media (max-width: 720px) {
+  .sp-meta-grid { grid-template-columns: 1fr; }
+  .sp-sketch-figure img { max-height: 48vh; }
+  .sp-sketch-hint { font-size: 11.5px; bottom: 12px; }
+}
